@@ -1,0 +1,42 @@
+# Entornos virtuales de Python
+.venv/
+venv/
+env/
+ENV/
+
+# Byte-compiled / optimizados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Variables de entorno y secretos
+.env
+.env.local
+*.key
+*.pem
+
+# IDEs y editores locales
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Directorios de pruebas temporales o scratch
+scratch/
+temp/
+tmp/
+*.tmp
+
+# Archivos de distribución / logs de ejecución
+build/
+dist/
+*.egg-info/
+*.log
