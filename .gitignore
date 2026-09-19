@@ -1,3 +1,11 @@
+# Artefactos regenerables de la Fase M.
+# Se excluyen los binarios de modelo y el dataset derivado, que `make entrenar`
+# reconstruye desde las fuentes en `datos/`. Los reportes en JSON sí se versionan:
+# son la evidencia de los OKR que se sustenta ante el jurado.
+modelos/*.joblib
+datos/dataset_maestro_mensual.parquet
+datos/macro_mensual.csv
+
 # Entornos virtuales de Python
 .venv/
 venv/
@@ -9,6 +17,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
+.pytest_cache/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/

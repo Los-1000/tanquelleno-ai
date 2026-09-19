@@ -1,0 +1,106 @@
+{
+  "generado_en": "2026-09-19T01:13:44.627557+00:00",
+  "objetivo": "premium_final",
+  "n_estaciones": 144,
+  "cobertura": {
+    "distritos": 27,
+    "marcas": [
+      "COESTI (Primax)",
+      "Primax afiliada",
+      "Repsol"
+    ],
+    "zonas": [
+      "CALLAO",
+      "LIMA"
+    ]
+  },
+  "mercado": {
+    "p10_mercado": 20.49,
+    "p50_mediana": 21.79,
+    "p90_mercado": 22.99,
+    "brecha_dispersion": 2.5,
+    "n_estaciones": 144,
+    "ahorro_por_tanqueada": 20.0
+  },
+  "baselines": {
+    "media_global": {
+      "mae_soles": 0.8292,
+      "rmse_soles": 1.0113,
+      "r2": 0.0
+    },
+    "mediana_por_distrito": {
+      "mae_soles": 0.5061,
+      "rmse_soles": 0.742,
+      "r2": 0.4616
+    },
+    "mediana_por_marca": {
+      "mae_soles": 0.8215,
+      "rmse_soles": 1.0347,
+      "r2": -0.0468
+    }
+  },
+  "candidatos_cv5": {
+    "ridge": {
+      "mae_soles": 0.6315,
+      "rmse_soles": 0.8166,
+      "r2": 0.348
+    },
+    "bosque_aleatorio": {
+      "mae_soles": 0.5765,
+      "rmse_soles": 0.7866,
+      "r2": 0.395
+    }
+  },
+  "modelo_elegido": "bosque_aleatorio",
+  "reparto_etiquetas": {
+    "BARATO": 58,
+    "CARO": 52,
+    "JUSTO": 34
+  },
+  "ahorro_por_radio": {
+    "1km": {
+      "ahorro_mediano_por_galon": 0.5,
+      "ahorro_mediano_por_tanqueada": 4.0,
+      "ahorro_p90_por_tanqueada": 12.0,
+      "cobertura_pct": 89.6
+    },
+    "2km": {
+      "ahorro_mediano_por_galon": 1.2,
+      "ahorro_mediano_por_tanqueada": 9.6,
+      "ahorro_p90_por_tanqueada": 23.2,
+      "cobertura_pct": 99.3
+    },
+    "3km": {
+      "ahorro_mediano_por_galon": 1.7,
+      "ahorro_mediano_por_tanqueada": 13.6,
+      "ahorro_p90_por_tanqueada": 24.0,
+      "cobertura_pct": 99.3
+    },
+    "5km": {
+      "ahorro_mediano_por_galon": 2.0,
+      "ahorro_mediano_por_tanqueada": 16.0,
+      "ahorro_p90_por_tanqueada": 28.0,
+      "cobertura_pct": 99.3
+    }
+  },
+  "descuento_por_marca": {
+    "COESTI (Primax)": {
+      "descuento_medio_por_galon": 1.0,
+      "descuento_max_por_galon": 1.0,
+      "ahorro_por_tanqueada": 8.0,
+      "n_estaciones": 81
+    },
+    "Primax afiliada": {
+      "descuento_medio_por_galon": 1.0,
+      "descuento_max_por_galon": 1.0,
+      "ahorro_por_tanqueada": 8.0,
+      "n_estaciones": 2
+    },
+    "Repsol": {
+      "descuento_medio_por_galon": 3.0,
+      "descuento_max_por_galon": 3.0,
+      "ahorro_por_tanqueada": 24.0,
+      "n_estaciones": 61
+    }
+  }
+}

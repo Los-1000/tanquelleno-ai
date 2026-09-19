@@ -1,0 +1,430 @@
+{
+  "generado_en": "2026-09-19T01:13:46.299657+00:00",
+  "n_evaluaciones": 60,
+  "meta_minima": 50,
+  "sin_alucinacion_pct": 100.0,
+  "kr2_cumple": true,
+  "fallos": [],
+  "casos": [
+    {
+      "departamento": "AMAZONAS",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "AMAZONAS",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "AMAZONAS",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "ANCASH",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "ANCASH",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "ANCASH",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "APURIMAC",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "APURIMAC",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "APURIMAC",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "AREQUIPA",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "AREQUIPA",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "AREQUIPA",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "AYACUCHO",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "AYACUCHO",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "AYACUCHO",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "CAJAMARCA",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "CAJAMARCA",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "CAJAMARCA",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "CUSCO",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "CUSCO",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "CUSCO",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "HUANCAVELICA",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "HUANCAVELICA",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "HUANCAVELICA",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "HUANUCO",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "HUANUCO",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "HUANUCO",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "ICA",
+      "nivel_tanque": "bajo",
+      "tendencia": "MANTIENE",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "ICA",
+      "nivel_tanque": "medio",
+      "tendencia": "MANTIENE",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "ICA",
+      "nivel_tanque": "lleno",
+      "tendencia": "MANTIENE",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "JUNIN",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "JUNIN",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "JUNIN",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "LA LIBERTAD",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "LA LIBERTAD",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "LA LIBERTAD",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "LAMBAYEQUE",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "LAMBAYEQUE",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "LAMBAYEQUE",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "LIMA",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "LIMA",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "LIMA",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "LORETO",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "LORETO",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "LORETO",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "MADRE DE DIOS",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "MADRE DE DIOS",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "MADRE DE DIOS",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "MOQUEGUA",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "MOQUEGUA",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "MOQUEGUA",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "PASCO",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "PASCO",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "PASCO",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "PIURA",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "PIURA",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "PIURA",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "PUNO",
+      "nivel_tanque": "bajo",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "PUNO",
+      "nivel_tanque": "medio",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    },
+    {
+      "departamento": "PUNO",
+      "nivel_tanque": "lleno",
+      "tendencia": "BAJA",
+      "cumple_contrato": true,
+      "cifras_inventadas": []
+    }
+  ]
+}
