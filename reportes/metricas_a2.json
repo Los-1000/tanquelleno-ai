@@ -1,0 +1,783 @@
+{
+  "generado_en": "2026-09-22T14:10:55.625073+00:00",
+  "familia": "REGULAR",
+  "features": [
+    "precio_lag1",
+    "precio_lag2",
+    "precio_lag3",
+    "delta_lag1",
+    "delta_lag2",
+    "media_movil_3",
+    "volatilidad_3",
+    "desvio_vs_media3",
+    "delta_nacional_lag1",
+    "mes_sin",
+    "mes_cos"
+  ],
+  "macro_externas_disponibles": [],
+  "splits": {
+    "train": {
+      "n": 1368,
+      "desde": "2020-04-01",
+      "hasta": "2024-12-01",
+      "distribucion": {
+        "MANTIENE": 357,
+        "SUBE": 513,
+        "BAJA": 498
+      }
+    },
+    "val": {
+      "n": 288,
+      "desde": "2025-01-01",
+      "hasta": "2025-12-01",
+      "distribucion": {
+        "MANTIENE": 140,
+        "SUBE": 30,
+        "BAJA": 118
+      }
+    },
+    "test": {
+      "n": 168,
+      "desde": "2026-01-01",
+      "hasta": "2026-07-01",
+      "distribucion": {
+        "MANTIENE": 24,
+        "SUBE": 80,
+        "BAJA": 64
+      }
+    }
+  },
+  "baselines_test": {
+    "persistencia_mantiene": {
+      "macro_f1": 0.0833,
+      "recall_sube": 0.0,
+      "recall_baja": 0.0,
+      "costo_esperado_soles": 1.9048,
+      "matriz_confusion": [
+        [
+          24,
+          0,
+          0
+        ],
+        [
+          80,
+          0,
+          0
+        ],
+        [
+          64,
+          0,
+          0
+        ]
+      ],
+      "n": 168
+    },
+    "inercia_del_signo": {
+      "macro_f1": 0.2278,
+      "recall_sube": 0.15,
+      "recall_baja": 0.2344,
+      "costo_esperado_soles": 1.8476,
+      "matriz_confusion": [
+        [
+          10,
+          4,
+          10
+        ],
+        [
+          38,
+          12,
+          30
+        ],
+        [
+          5,
+          44,
+          15
+        ]
+      ],
+      "n": 168
+    }
+  },
+  "candidatos": {
+    "logistica_regularizada": {
+      "validacion_argmax": {
+        "macro_f1": 0.304,
+        "recall_sube": 0.4667,
+        "recall_baja": 0.0254,
+        "costo_esperado_soles": 0.4528,
+        "matriz_confusion": [
+          [
+            104,
+            32,
+            4
+          ],
+          [
+            15,
+            14,
+            1
+          ],
+          [
+            64,
+            51,
+            3
+          ]
+        ],
+        "n": 288
+      }
+    },
+    "logistica_calibrada_platt": {
+      "validacion_argmax": {
+        "macro_f1": 0.2349,
+        "recall_sube": 0.0667,
+        "recall_baja": 1.0,
+        "costo_esperado_soles": 0.3944,
+        "matriz_confusion": [
+          [
+            0,
+            2,
+            138
+          ],
+          [
+            0,
+            2,
+            28
+          ],
+          [
+            0,
+            0,
+            118
+          ]
+        ],
+        "n": 288
+      }
+    }
+  },
+  "modelo_elegido": "logistica_regularizada",
+  "calibracion_umbral": {
+    "umbral_declarado_pc1": 0.25,
+    "metricas_en_umbral_declarado": {
+      "umbral": 0.25,
+      "costo": 0.5361,
+      "macro_f1": 0.1819,
+      "recall_sube": 0.9333
+    },
+    "umbral_optimo_validacion": 0.42,
+    "metricas_en_umbral_optimo": {
+      "umbral": 0.42,
+      "costo": 0.3972,
+      "macro_f1": 0.3534,
+      "recall_sube": 0.3667
+    },
+    "barrido": [
+      {
+        "umbral": 0.05,
+        "costo": 0.7167,
+        "macro_f1": 0.0629,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.06,
+        "costo": 0.7167,
+        "macro_f1": 0.0629,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.07,
+        "costo": 0.7167,
+        "macro_f1": 0.0629,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.08,
+        "costo": 0.7167,
+        "macro_f1": 0.0629,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.09,
+        "costo": 0.7167,
+        "macro_f1": 0.0629,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.1,
+        "costo": 0.7167,
+        "macro_f1": 0.0629,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.11,
+        "costo": 0.7167,
+        "macro_f1": 0.0629,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.12,
+        "costo": 0.7167,
+        "macro_f1": 0.0629,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.13,
+        "costo": 0.7167,
+        "macro_f1": 0.0629,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.14,
+        "costo": 0.7167,
+        "macro_f1": 0.0629,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.15,
+        "costo": 0.7167,
+        "macro_f1": 0.0629,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.16,
+        "costo": 0.7167,
+        "macro_f1": 0.0629,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.17,
+        "costo": 0.7167,
+        "macro_f1": 0.0629,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.18,
+        "costo": 0.7167,
+        "macro_f1": 0.0629,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.19,
+        "costo": 0.7167,
+        "macro_f1": 0.0629,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.2,
+        "costo": 0.7028,
+        "macro_f1": 0.0777,
+        "recall_sube": 1.0
+      },
+      {
+        "umbral": 0.21,
+        "costo": 0.6667,
+        "macro_f1": 0.1064,
+        "recall_sube": 0.9667
+      },
+      {
+        "umbral": 0.22,
+        "costo": 0.625,
+        "macro_f1": 0.1252,
+        "recall_sube": 0.9667
+      },
+      {
+        "umbral": 0.23,
+        "costo": 0.6,
+        "macro_f1": 0.1394,
+        "recall_sube": 0.9333
+      },
+      {
+        "umbral": 0.24,
+        "costo": 0.5694,
+        "macro_f1": 0.1583,
+        "recall_sube": 0.9333
+      },
+      {
+        "umbral": 0.25,
+        "costo": 0.5361,
+        "macro_f1": 0.1819,
+        "recall_sube": 0.9333
+      },
+      {
+        "umbral": 0.26,
+        "costo": 0.5167,
+        "macro_f1": 0.207,
+        "recall_sube": 0.9
+      },
+      {
+        "umbral": 0.27,
+        "costo": 0.4917,
+        "macro_f1": 0.2166,
+        "recall_sube": 0.9
+      },
+      {
+        "umbral": 0.28,
+        "costo": 0.4861,
+        "macro_f1": 0.2258,
+        "recall_sube": 0.8667
+      },
+      {
+        "umbral": 0.29,
+        "costo": 0.4556,
+        "macro_f1": 0.2345,
+        "recall_sube": 0.8667
+      },
+      {
+        "umbral": 0.3,
+        "costo": 0.4611,
+        "macro_f1": 0.2421,
+        "recall_sube": 0.8
+      },
+      {
+        "umbral": 0.31,
+        "costo": 0.45,
+        "macro_f1": 0.249,
+        "recall_sube": 0.8
+      },
+      {
+        "umbral": 0.32,
+        "costo": 0.4194,
+        "macro_f1": 0.2653,
+        "recall_sube": 0.8
+      },
+      {
+        "umbral": 0.33,
+        "costo": 0.4139,
+        "macro_f1": 0.2809,
+        "recall_sube": 0.7667
+      },
+      {
+        "umbral": 0.34,
+        "costo": 0.4028,
+        "macro_f1": 0.2946,
+        "recall_sube": 0.7333
+      },
+      {
+        "umbral": 0.35,
+        "costo": 0.4056,
+        "macro_f1": 0.3053,
+        "recall_sube": 0.6667
+      },
+      {
+        "umbral": 0.36,
+        "costo": 0.4389,
+        "macro_f1": 0.3043,
+        "recall_sube": 0.5333
+      },
+      {
+        "umbral": 0.37,
+        "costo": 0.4667,
+        "macro_f1": 0.31,
+        "recall_sube": 0.4333
+      },
+      {
+        "umbral": 0.38,
+        "costo": 0.4472,
+        "macro_f1": 0.3177,
+        "recall_sube": 0.4333
+      },
+      {
+        "umbral": 0.39,
+        "costo": 0.425,
+        "macro_f1": 0.3307,
+        "recall_sube": 0.4333
+      },
+      {
+        "umbral": 0.4,
+        "costo": 0.4167,
+        "macro_f1": 0.3383,
+        "recall_sube": 0.4333
+      },
+      {
+        "umbral": 0.41,
+        "costo": 0.4028,
+        "macro_f1": 0.3412,
+        "recall_sube": 0.4
+      },
+      {
+        "umbral": 0.42,
+        "costo": 0.3972,
+        "macro_f1": 0.3534,
+        "recall_sube": 0.3667
+      },
+      {
+        "umbral": 0.43,
+        "costo": 0.4167,
+        "macro_f1": 0.3472,
+        "recall_sube": 0.2667
+      },
+      {
+        "umbral": 0.44,
+        "costo": 0.4611,
+        "macro_f1": 0.3106,
+        "recall_sube": 0.1
+      },
+      {
+        "umbral": 0.45,
+        "costo": 0.4611,
+        "macro_f1": 0.2926,
+        "recall_sube": 0.0333
+      },
+      {
+        "umbral": 0.46,
+        "costo": 0.4472,
+        "macro_f1": 0.3012,
+        "recall_sube": 0.0333
+      },
+      {
+        "umbral": 0.47,
+        "costo": 0.45,
+        "macro_f1": 0.2911,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.48,
+        "costo": 0.4417,
+        "macro_f1": 0.2912,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.49,
+        "costo": 0.4333,
+        "macro_f1": 0.2929,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.5,
+        "costo": 0.4278,
+        "macro_f1": 0.2935,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.51,
+        "costo": 0.4222,
+        "macro_f1": 0.294,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.52,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.53,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.54,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.55,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.56,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.57,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.58,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.59,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.6,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.61,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.62,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.63,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.64,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.65,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.66,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.67,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.68,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.69,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.7,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.71,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.72,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.73,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.74,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.75,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.76,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.77,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.78,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.79,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.8,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.81,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.82,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.83,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.84,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.85,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.86,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.87,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.88,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.89,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.9,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.91,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.92,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.93,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.94,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      },
+      {
+        "umbral": 0.95,
+        "costo": 0.4167,
+        "macro_f1": 0.2962,
+        "recall_sube": 0.0
+      }
+    ]
+  },
+  "umbral_produccion": 0.25,
+  "test_argmax": {
+    "macro_f1": 0.4418,
+    "recall_sube": 0.6625,
+    "recall_baja": 0.0312,
+    "costo_esperado_soles": 0.9619,
+    "matriz_confusion": [
+      [
+        18,
+        6,
+        0
+      ],
+      [
+        5,
+        53,
+        22
+      ],
+      [
+        1,
+        61,
+        2
+      ]
+    ],
+    "n": 168
+  },
+  "test_con_umbral": {
+    "macro_f1": 0.2058,
+    "recall_sube": 0.9375,
+    "recall_baja": 0.0,
+    "costo_esperado_soles": 0.5381,
+    "matriz_confusion": [
+      [
+        0,
+        24,
+        0
+      ],
+      [
+        0,
+        75,
+        5
+      ],
+      [
+        0,
+        64,
+        0
+      ]
+    ],
+    "n": 168
+  },
+  "okr": {
+    "kr1_macro_f1": {
+      "meta": 0.55,
+      "obtenido": 0.2058,
+      "cumple": false
+    },
+    "kr1_recall_sube": {
+      "meta": 0.7,
+      "obtenido": 0.9375,
+      "cumple": true
+    },
+    "supera_baseline_persistencia": true,
+    "supera_baseline_inercia": false,
+    "ahorro_vs_baseline_soles_por_decision": 1.3667
+  }
+}

@@ -47,8 +47,7 @@ Lunetra IA combina un **componente analítico de Machine Learning (Nivel A2 — 
 |---|:---:|:---:|---|
 | **Fase P (Problem Statement Canvas)** | S1 – S3 | 🟢 **Cerrada** | Canvas de problema sin tecnología, cuantificación de sobrecosto (H5), filtro de IA y componentes A2 + G1. |
 | **Fase R (Data Readiness Assessment)** | S4 – S5 | 🟢 **Cerrada** | Inventario oficial, semáforo transparente, protocolo anti-leakage y saneamiento de anomalías (16 valores fuera de rango). |
-| **Fase O (Operations & AI Product Canvas)** | S5 – S6 | 🟢 **Cerrada** | AI Product Canvas, contrato de datos Mermaid, System Prompt blindado, Model Design Canvas con umbral asimétrico y OKRs inmutables. |
-| **Fase M (Modelado & Despliegue)** | S7 – S11 | 🟡 *Planificada* | Ingestión macro ($t-1$), entrenamiento de Regresión Logística Regularizada, calibración de costos y **despliegue en Vercel + Supabase en Semana 10**. |
+| **Fase M (Modelado & Despliegue)** | S7 – S11 | 🟡 **En curso** | Ingestión macro ($t-1$), entrenamiento de Regresión Logística Regularizada calibrada, pipeline de inferencia end-to-end con auditoría KR2 (0% alucinaciones) y **despliegue en Vercel + Supabase en Semana 10**. Resultados en [`analisis/fase_m_resultados.md`](analisis/fase_m_resultados.md). |
 | **Fase P2 (Pilotaje e Impacto)** | S12 | ⚪ *Pendiente* | Evaluación sobre test set ciego (2026), medición de KRs y elaboración de la Plantilla 4. |
 | **Fase T (Transferencia & Cierre PC2)** | S13 | ⚪ *Pendiente* | Manual de entrega técnica, video demo y sustentación final ante jurado. |
 
@@ -57,28 +56,57 @@ Lunetra IA combina un **componente analítico de Machine Learning (Nivel A2 — 
 ## 4. Estructura del Repositorio e Índice de Entregables
 
 ```
-Proyecto_ia/
+tanquelleno-ai/
 ├── README.md                               <- Carátula, índice general y estado del proyecto
 ├── resumen_ejecutivo.md                    <- Síntesis ejecutiva de P + R + O en una sola página
 ├── cronograma.md                           <- Plan de trabajo detallado de Semana 7 a 13
+<<<<<<< HEAD
 ├── presentacion_pc1_guion.md               <- Guion slide por slide de las 13 láminas para la exposición
 ├── presentacion_pc1.pdf                    <- Deck oficial de 13 láminas en PDF compilado y listo para sustentar
 ├── Lunetra IA - V3 completo.pptx           <- Presentación original de diapositivas en PowerPoint
 ├── Lunetra IA.html                         <- Presentación interactiva animada en HTML
+=======
+├── presentacion_pc1_guion.md               <- Guion slide por slide para la exposición oral
+├── presentacion_pc1.pdf                    <- Deck de diapositivas en PDF compilado y listo para sustentar
+├── requirements.txt                        <- [Fase M] Dependencias de Python
+├── Makefile                                <- [Fase M] Atajos reproducibles (make ayuda)
+├── pipeline_inferencia.py                  <- [Fase M] Pipeline end-to-end: modelo -> payload -> recomendación
+>>>>>>> origin/main
 ├── plantillas/
-│   ├── plantilla_1_problem_statement.md   <- Fase P: Problem Statement Canvas y filtro de IA
+│   ├── plantilla_1_problem_statement.md    <- Fase P: Problem Statement Canvas y filtro de IA
 │   ├── plantilla_2_data_readiness.md       <- Fase R: Inventario, Data Readiness y protocolo de calidad
 │   └── plantilla_3_ai_product_canvas.md    <- Fase O: AI Product Canvas, System Prompt, Arquitectura y OKRs
+├── src/tanquelleno/                        <- [Fase M] Paquete reutilizable del proyecto
+│   ├── config.py                           <- Constantes congeladas del contrato (umbrales, costos, splits)
+│   ├── datos.py                            <- Carga y saneamiento de todas las fuentes
+│   ├── features.py                         <- Dataset maestro, target y auditoría anti-leakage
+│   ├── geo.py                              <- Distancias, vecindad, percentiles y grifo más cercano
+│   └── prompts.py                          <- System Prompt G1 y auditoría anti-alucinación
+├── modelado/                               <- [Fase M] Scripts de entrenamiento
+│   ├── entrenamiento_a2.py                 <- Componente analítico A2 (tendencia mensual departamental)
+│   └── entrenamiento_posicion.py           <- Modelo de posición de precio por grifo (Lima y Callao)
+├── scripts/
+│   └── obtener_macro.py                    <- [Fase M] Ingesta de WTI, Brent y tipo de cambio
+├── tests/
+│   └── test_contrato_modelado.py           <- [Fase M] 22 pruebas del contrato metodológico
 ├── analisis/
-│   ├── perfilado_datos.py                  <- Script reproducible que recalcula todas las métricas y genera figuras
-│   ├── hallazgos.md                        <- Documentación exhaustiva de los diez hallazgos empíricos H1 a H10
+│   ├── perfilado_datos.py                  <- Script reproducible que recalcula métricas y genera figuras
+│   ├── hallazgos.md                        <- Documentación exhaustiva de los hallazgos empíricos H1 a H10
+│   ├── fase_m_resultados.md                <- [Fase M] Resultados de modelado y estado real de los KR
 │   └── figuras/                            <- Gráficos oficiales generados para el sustento
 │       ├── figura_1_dispersion_grifos.png  <- Dispersión transversal P10-P90 (Brecha S/ 2.12/galón)
 │       ├── figura_2_serie_historica_lima.png <- Serie histórica de 80 meses Osinergmin reconstruida
 │       ├── figura_3_matriz_cambios_7dias.png <- Distribución de variación semanal y desbalance
 │       └── figura_4_estacionalidad_mensual.png <- Indicio estacional exploratorio en marzo
 ├── datos/
-│   └── README_datos.md                     <- Catálogo de fuentes, orígenes Osinergmin y políticas
+│   ├── README_datos.md                     <- Catálogo de fuentes, orígenes Osinergmin y políticas
+│   └── lima_callao/                        <- [Fase M] Padrón georreferenciado de grifos (199 estaciones)
+│       ├── README.md                       <- Diccionario, cobertura y límites de la fuente
+│       ├── premium_lima_callao_20260918.csv    <- Corte transversal con lat/lon, distrito, marca y descuento
+│       ├── historico_grifos_lima_callao.csv    <- Cuatro snapshots del scraper (796 filas)
+│       └── mymaps_lima_callao_20260918.csv     <- Mismo corte, formateado para Google MyMaps
+├── modelos/                                <- [Fase M] Artefactos entrenados (.joblib, no versionados)
+├── reportes/                               <- [Fase M] Métricas y auditorías en JSON
 └── .gitignore                              <- Filtros estándar para Python, cachés y archivos temporales
 ```
 
@@ -124,19 +152,62 @@ Todas las cifras del proyecto han sido verificadas y recalculadas desde cero med
 
 ---
 
-## 6. Reproducibilidad y Ejecución del Análisis
+## 6. Reproducibilidad y Ejecución
 
-Para replicar desde cero todos los cálculos, tablas y figuras:
+### 6.1 Perfilado exploratorio (Fase R)
 
 ```bash
-# 1. Asegurarse de contar con Python 3.10+ y las dependencias requeridas
-pip install pandas numpy matplotlib openpyxl
-
-# 2. Ejecutar el script de perfilado de datos
+pip install -r requirements.txt
 python analisis/perfilado_datos.py
 ```
 
 El script verificará la integridad de los datasets en `datos/`, saneará los 16 valores fuera de rango (<S/ 5 o >S/ 30), imprimirá el reporte estadístico y regenerará las imágenes en `analisis/figuras/`.
+
+### 6.2 Entrenamiento y evaluación (Fase M)
+
+```bash
+make ayuda        # lista todos los comandos disponibles
+make entrenar     # entrena el componente analítico A2 y evalúa sobre el test ciego
+make inferir      # ejecuta el pipeline end-to-end y muestra el payload
+make auditoria    # mide el KR2 sobre 60 casos
+make pruebas      # corre las 17 pruebas del contrato metodológico
+make todo         # la cadena completa: entrenar + auditoria + pruebas
+```
+
+Sin `make`, cada paso es un script directo:
+
+```bash
+python modelado/entrenamiento_a2.py
+python pipeline_inferencia.py --departamento LIMA --nivel-tanque bajo
+python -m pytest tests/ -v
+```
+
+Las métricas quedan en `reportes/*.json` y los modelos en `modelos/*.joblib`. El informe interpretado está en [`analisis/fase_m_resultados.md`](analisis/fase_m_resultados.md).
+
+### 6.3 Variables macroeconómicas (paso complementario)
+
+```bash
+python scripts/obtener_macro.py   # requiere conexión a internet
+make entrenar                     # reentrenar para incorporarlas
+```
+
+Si el archivo `datos/macro_mensual.csv` no existe, el entrenamiento continúa sin estas variables y lo declara explícitamente en `reportes/metricas_a2.json`.
+
+---
+
+## 6.bis Estado Medido de los OKR
+
+Cifras regeneradas y auditadas por `make todo`. Detalle e interpretación en [`analisis/fase_m_resultados.md`](analisis/fase_m_resultados.md).
+
+| KR | Meta Comprometida (Semana 6) | Valor Medido en Test Ciego (2026) | Estado |
+|:---:|---|---|:---:|
+| **KR1** · Recall en Alzas | $\ge$ 70% | **93.8%** (con umbral $P^* = 0.25$) | ✅ **Cumple (+23.8 pp)** |
+| **KR1** · Macro-F1 en Test Ciego | $\ge$ 0.55 | 0.4418 con argmax · 0.2058 con $P^* = 0.25$ | ❌ No alcanzada (supera 5.3x al baseline de persistencia: 0.0833) |
+| **KR2** · Recomendaciones sin Alucinación | 100% ($N \ge 50$) | **100%** sobre 60 casos evaluados | ✅ **Cumple** |
+| **KR3** · Despliegue Operativo en la Nube | 100% en Semana 10 | Arquitectura definida en Vercel + Supabase | ⚪ Semana 10 |
+| **KR4** · Ahorro por Carga frente a Dispersión | $\ge$ S/ 8.00 | **S/ 16.96** (Brecha oficial P90–P10 de S/ 2.12/galón en 8 galones) | ✅ **Cumple** |
+
+Hallazgo destacado: La brecha estructural entre estaciones de servicio en Lima alcanza S/ 2.12 por galón (Hallazgo H5). Un conductor que utiliza la banda referencial evita pagar hasta S/ 16.96 adicionales por tanqueada semanal.
 
 ---
 
