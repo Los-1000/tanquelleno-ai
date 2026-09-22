@@ -1,8 +1,9 @@
 # Evidencia Empírica y Perfilado de Datos: Hallazgos H1 – H10
 
-**Proyecto:** TanqueLleno AI — Sistema de Predicción de Tendencia de Precios y Optimización de Carga  
+**Proyecto:** Lunetra IA — Asistente Inteligente de Combustibles (¿Lleno hoy o espero?)  
+**Equipo:** Stefano Canales · Carlos Flores · Carlos Alcazar · Miguel Ángel Mori  
 **Curso:** AD5018 — Inteligencia Artificial para Negocios (UTEC, Framework PROMPT v2.0)  
-**Fecha de corte analítico:** 2026-03-01  
+**Fecha de corte analítico:** 2026-03-01 / 19 de septiembre de 2026  
 **Fuentes analizadas:**
 1. Archivo A: Registro diario por grifo a nivel nacional (`precios_combustibles_anonimizados_20260301_part1.csv`, 497,156 filas, 8,825 grifos únicos, 59 días).
 2. Archivo B y C: Serie histórica mensual por departamento Osinergmin SCOP-DOCS (`precios_combustibles_datos_crudos.csv` y `historico_precios_combustibles_peru_2020_2026.xlsx`, 80 meses continuos: enero 2020 – agosto 2026).

@@ -1,6 +1,7 @@
 """
 ===============================================================================
-PROYECTO: TanqueLleno AI — Predicción Inteligente de Precios de Combustibles
+PROYECTO: Lunetra IA — Asistente Inteligente de Combustibles
+EQUIPO:   Stefano Canales · Carlos Flores · Carlos Alcazar · Miguel Ángel Mori
 CURSO:    AD5018 - Inteligencia Artificial para Negocios (UTEC, Framework PROMPT v2.0)
 ARCHIVO:  analisis/perfilado_datos.py
 DESCRIPCIÓN:
@@ -289,6 +290,7 @@ for bar, val in zip(bars_m, estac_ordenada['mean']):
 ax.set_title('Figura 4: Variación Promedio Mensual del Precio en Lima por Mes Calendario\n'
              'Indicio exploratorio: Marzo registra mayor presión alcista (+S/ 0.99 a +S/ 1.01, N=7)', fontsize=12, fontweight='bold', pad=12)
 ax.set_ylabel('Variación Media (S/ por Galón)', fontsize=10, fontweight='bold')
+ax.set_xticks(range(len(estac_ordenada.index)))
 ax.set_xticklabels(estac_ordenada.index, rotation=30, ha='right')
 ax.yaxis.set_major_formatter(ticker.FormatStrFormatter('S/ %+.2f'))
 plt.tight_layout()

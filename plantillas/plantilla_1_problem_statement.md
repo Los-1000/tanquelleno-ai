@@ -2,18 +2,22 @@
 **Curso:** AD5018 — Inteligencia Artificial para Negocios  
 **Universidad:** Universidad de Ingeniería y Tecnología (UTEC)  
 **Departamento:** Administración & Negocios Digitales · Malla 2024 — Ciclo 9  
-**Proyecto:** TanqueLleno AI  
-**Integrantes:** `[COMPLETAR: Nombre Completo 1, Nombre Completo 2, Nombre Completo 3, Nombre Completo 4]`  
-**Fecha de entrega:** Semana 6  
+**Proyecto:** Lunetra IA — Asistente Inteligente de Combustibles  
+**Integrantes:** Stefano Canales · Carlos Flores · Carlos Alcazar · Miguel Ángel Mori  
+**Fecha de entrega:** Semana 6 · 19 de septiembre de 2026  
 
 ---
 
 ## 1. Problem Statement Canvas
 
 ### 1.1 Usuario Específico (Segmento Objetivo)
-**Conductor particular de Lima Metropolitana** que utiliza su vehículo propio (automóvil o SUV liviana a gasolina) para desplazamientos laborales o familiares diarios (25 a 40 km al día), con un consumo semanal típico de **8 galones de Gasolina Regular (G90) o Premium** y una frecuencia de abastecimiento de 1 a 2 veces por semana.
+**Una persona, no "el mercado" (Conductor particular de Lima Metropolitana):**
+- **Lima:** Vive y maneja dentro de la ciudad.
+- **Todos los días:** Usa su auto para trabajar, no de paseo (recorridos laborales diarios de 25 a 40 km).
+- **8 galones:** Es lo que carga en una semana normal de Gasolina Regular (G90) o Premium.
+- **Su propio bolsillo:** Nadie le reembolsa la gasolina ni cuenta con convenios de flota corporativa.
 
-> *Nota metodológica de diseño:* Se descarta explícitamente el uso de categorías genéricas como "los conductores", "la ciudadanía" o "los peruanos". El segmento se restringe a personas naturales que asumen directamente el costo de combustible de su propio bolsillo y carecen de subsidios corporativos o convenios de flota.
+> *Nota metodológica de diseño:* Se descarta explícitamente el uso de categorías genéricas como "los conductores", "la ciudadanía" o "los peruanos". Si el usuario es "todos", el producto no sirve para nadie. El segmento se restringe a la persona natural que asume directamente el costo del combustible.
 
 ### 1.2 Problema
 Los conductores particulares en Lima Metropolitana enfrentan una **elevada e invisible dispersión de precios minoristas entre estaciones de servicio en un mismo período, sumada a la incertidumbre sobre la dirección y el momento de traslado de los ajustes mensuales de precios mayoristas al surtidor**. Esta situación les impide anticipar si les conviene cargar tanque lleno hoy o esperar, así como identificar si la estación donde repostan se ubica en el rango razonable o en la cola cara del mercado.
@@ -40,11 +44,12 @@ El impacto económico perjudicial se sustenta en la evidencia cuantitativa del m
 
 ## 2. Contexto y Evidencia del Comportamiento Actual
 
-### 2.1 ¿Cómo decide hoy el usuario?
-Actualmente, el conductor particular decide su compra bajo heurísticas rutinarias:
-1. **Inercia espacial:** Acude siempre a la misma estación cercana a su domicilio o lugar de trabajo, sin comparar si dicho grifo pertenece al 29.7% de estaciones estáticas (Hallazgo H4) que mantienen precios elevados por inacción comercial.
-2. **Reacción tardía a noticias:** Se entera de las alzas cuando ya se hicieron efectivas en el surtidor o a través de notas de prensa sensacionalistas sobre el crudo que no explican el tiempo de rezago local.
-3. **Frustración por consultas engorrosas:** Herramientas existentes de consulta pública (como Facilito) obligan al usuario a buscar grifo por grifo de manera manual, sin contextualizar si el precio observado es alto o bajo respecto a la distribución estadística ni brindar perspectiva de si el combustible subirá la próxima semana.
+### 2.1 ¿Cómo decide hoy el usuario? (La realidad del día a día)
+Todos los que manejan en Lima se hacen la misma pregunta, y nadie tiene la respuesta certera: **"¿Lleno hoy o espero?"**. En la práctica, ocurre esto:
+1. **Se carga por costumbre (Inercia):** El conductor acude al grifo de siempre y el día que se acuerda, sin comparar nada, asumiendo el riesgo de repostar en el 29.7% de estaciones estáticas (Hallazgo H4) que mantienen márgenes elevados sin justificación.
+2. **El precio sube sin aviso:** No existe alerta previa; el usuario se entera recién cuando ya está frente al surtidor pagando el incremento.
+3. **Nadie compara precios:** Aunque los datos existen y son públicos en Osinergmin (SCOP/PRICE), están confinados en tablas densas y reportes PDF que ningún conductor lee antes de salir de casa.
+4. **Frustración por consultas engorrosas:** Las herramientas públicas tradicionales (como Facilito) obligan a buscar grifo por grifo manualmente, sin dar contexto de dispersión estadística ni responder si conviene cargar hoy o esperar la próxima semana.
 
 ### 2.2 Costo de oportunidad del usuario
 El conductor asume un doble perjuicio:
@@ -86,7 +91,7 @@ El producto integra de forma desacoplada dos componentes complementarios bajo el
 - **Definición del componente:** Modelo de clasificación supervisada de Machine Learning que predice la dirección del precio promedio mensual para el departamento seleccionado en el horizonte $t+1$:
   $$\hat{Y}_{t+1} \in \{\text{Sube}, \text{Se Mantiene}, \text{Baja}\}$$
 - **Justificación de Nivel A2:**
-  - Compara formalmente al menos dos modelos: un **Baseline obligatorio de persistencia** ("el precio del próximo mes será igual al actual") frente a modelos entrenados (Regresión Logística Regularizada y Gradient Boosting / LightGBM).
+  - Compara formalmente dos aproximaciones: un **Baseline obligatorio de persistencia** ("el precio del próximo mes será igual al actual") frente a una **Regresión Logística Regularizada (L2 Ridge / ElasticNet)** con calibración sigmoide de probabilidades (Platt Scaling). Se descartan explícitamente arquitecturas complejas de ensamble de árboles o redes neuronales profundas que resultan inviables e implausibles para una serie temporal corta de 80 meses mensuales, priorizando generalización, interpretabilidad de coeficientes y estabilidad en las probabilidades estimadas.
   - Optimiza explícitamente el **umbral de decisión** con base en una matriz de costos asimétricos: equivocarse al no advertir un alza le cuesta al usuario S/ 4.00, mientras que alertar una subida que no ocurre solo genera el costo marginal de adelantar la recarga.
   - La muestra de grifos individuales (Archivo A) se explota analíticamente para calcular y proveer los percentiles de dispersión estructural (P10, P50, P90).
 

@@ -1,4 +1,4 @@
-# TanqueLleno AI — Asistente Inteligente para la Optimización del Gasto en Combustibles
+# Lunetra IA — Asistente Inteligente para la Optimización del Gasto en Combustibles
 
 Repositorio oficial del proyecto desarrollado para el curso **AD5018 — Inteligencia Artificial para Negocios** en la **Universidad de Ingeniería y Tecnología (UTEC)**, bajo el marco metodológico **PROMPT v2.0**.
 
@@ -8,26 +8,36 @@ Repositorio oficial del proyecto desarrollado para el curso **AD5018 — Intelig
 
 ## 1. Carátula del Proyecto
 
-- **Nombre del MVP:** TanqueLleno AI
+- **Nombre del MVP:** Lunetra IA
+- **Pregunta Central:** "¿Lleno hoy o espero?"
 - **Curso:** AD5018 — Inteligencia Artificial para Negocios
 - **Universidad:** Universidad de Ingeniería y Tecnología (UTEC)
 - **Departamento:** Administración & Negocios Digitales · Malla 2024 — Ciclo 9
 - **Evaluación:** Práctica Calificada 1 (PC1) — Fases P, R y O (Semana 6)
 - **Integrantes del Equipo:**
-  - `[COMPLETAR: Nombre Completo 1 - Código UTEC]`
-  - `[COMPLETAR: Nombre Completo 2 - Código UTEC]`
-  - `[COMPLETAR: Nombre Completo 3 - Código UTEC]`
+  - Stefano Canales
+  - Carlos Flores
+  - Carlos Alcazar
+  - Miguel Ángel Mori
 - **Usuario GitHub / Organización:** [Los-1000](https://github.com/Los-1000)
 - **Repositorio Oficial:** [tanquelleno-ai](https://github.com/Los-1000/tanquelleno-ai)
-- **Fecha de Entrega:** Semana 6 · Ciclo 2026-II
+- **Fecha de Entrega / Sustentación:** 19 de septiembre de 2026 · Ciclo 2026-II
 
 ---
 
 ## 2. Descripción del Proyecto
 
-TanqueLleno AI es un asistente de inteligencia artificial concebido para proteger la economía de los conductores particulares de Lima Metropolitana ante la opacidad en la dispersión minorista de combustibles y la incertidumbre de los ajustes mensuales de precios. 
+Lunetra IA responde a una sola pregunta, respondida bien: **"¿Lleno hoy o espero?"**. 
 
-La solución combina un **componente analítico de Machine Learning (Nivel A2)** que predice la tendencia mensual departamental optimizando un umbral de decisión ante costos asimétricos de error, con un **componente generativo en lenguaje natural (Nivel G1)** que traduce las probabilidades y los percentiles de mercado (P10 a P90) en recomendaciones prácticas, directas y sin alucinaciones numéricas.
+En Lima Metropolitana, los conductores particulares que usan su auto a diario enfrentan una brecha de precios de hasta S/ 2.12 por galón el mismo día entre grifos (S/ 17 por tanqueada, S/ 814 al año). 
+
+Lunetra IA combina un **componente analítico de Machine Learning (Nivel A2 — Eje de Ambición)** basado en **Regresión Logística Regularizada (L2 Ridge / ElasticNet) con Calibración Sigmoide (Platt Scaling)** evaluada formalmente frente al **Baseline Obligatorio de Persistencia** (descartando modelos sobreparametrizados de ensamble o redes profundas inviables para una serie corta de 80 meses), optimizando un umbral asimétrico de decisión ($P^* = 0.25$, porque no avisar una subida cuesta 5 veces más que una falsa alarma), con un **componente generativo (Nivel G1)** que responde en una frase clara y empática: **"Carga hoy"** o **"Puedes esperar"**, junto con la banda de precio justo de referencia, sin alucinaciones numéricas. Detrás hay seis años de datos; adelante, una frase.
+
+### Stack Tecnológico de Producción
+- **Frontend & Edge Functions:** Next.js (React) alojado en la red global de **Vercel** (latencia < 1.5s).
+- **Base de Datos & Almacenamiento:** **Supabase** (PostgreSQL Cloud administrado con PostgREST).
+- **Modelado Analítico (A2):** Python 3.12 / Scikit-Learn (Regresión Logística Regularizada con Calibración Platt).
+- **Motor Generativo (G1):** Google Gemini Flash API con System Prompt blindado y contexto cerrado.
 
 ---
 
@@ -38,7 +48,7 @@ La solución combina un **componente analítico de Machine Learning (Nivel A2)**
 | **Fase P (Problem Statement Canvas)** | S1 – S3 | 🟢 **Cerrada** | Canvas de problema sin tecnología, cuantificación de sobrecosto (H5), filtro de IA y componentes A2 + G1. |
 | **Fase R (Data Readiness Assessment)** | S4 – S5 | 🟢 **Cerrada** | Inventario oficial, semáforo transparente, protocolo anti-leakage y saneamiento de anomalías (16 valores fuera de rango). |
 | **Fase O (Operations & AI Product Canvas)** | S5 – S6 | 🟢 **Cerrada** | AI Product Canvas, contrato de datos Mermaid, System Prompt blindado, Model Design Canvas con umbral asimétrico y OKRs inmutables. |
-| **Fase M (Modelado & Despliegue)** | S7 – S11 | 🟡 *Planificada* | Ingestión macro ($t-1$), entrenamiento tabular, calibración de costos y **despliegue en Streamlit Cloud en Semana 10**. |
+| **Fase M (Modelado & Despliegue)** | S7 – S11 | 🟡 *Planificada* | Ingestión macro ($t-1$), entrenamiento de Regresión Logística Regularizada, calibración de costos y **despliegue en Vercel + Supabase en Semana 10**. |
 | **Fase P2 (Pilotaje e Impacto)** | S12 | ⚪ *Pendiente* | Evaluación sobre test set ciego (2026), medición de KRs y elaboración de la Plantilla 4. |
 | **Fase T (Transferencia & Cierre PC2)** | S13 | ⚪ *Pendiente* | Manual de entrega técnica, video demo y sustentación final ante jurado. |
 
@@ -51,8 +61,10 @@ Proyecto_ia/
 ├── README.md                               <- Carátula, índice general y estado del proyecto
 ├── resumen_ejecutivo.md                    <- Síntesis ejecutiva de P + R + O en una sola página
 ├── cronograma.md                           <- Plan de trabajo detallado de Semana 7 a 13
-├── presentacion_pc1_guion.md               <- Guion slide por slide para la exposición oral
-├── presentacion_pc1.pdf                    <- Deck de diapositivas en PDF compilado y listo para sustentar
+├── presentacion_pc1_guion.md               <- Guion slide por slide de las 13 láminas para la exposición
+├── presentacion_pc1.pdf                    <- Deck oficial de 13 láminas en PDF compilado y listo para sustentar
+├── Lunetra IA - V3 completo.pptx           <- Presentación original de diapositivas en PowerPoint
+├── Lunetra IA.html                         <- Presentación interactiva animada en HTML
 ├── plantillas/
 │   ├── plantilla_1_problem_statement.md   <- Fase P: Problem Statement Canvas y filtro de IA
 │   ├── plantilla_2_data_readiness.md       <- Fase R: Inventario, Data Readiness y protocolo de calidad
@@ -77,8 +89,10 @@ Proyecto_ia/
 | [`README.md`](README.md) | General | Portada del equipo, estado del proyecto e índice de navegación. |
 | [`resumen_ejecutivo.md`](resumen_ejecutivo.md) | Síntesis | Resumen ejecutivo de una página integrando Fases P, R y O. |
 | [`cronograma.md`](cronograma.md) | Planificación | Plan semana por semana de S7 a S13 (Despliegue en Semana 10). |
-| [`presentacion_pc1_guion.md`](presentacion_pc1_guion.md) | Sustentación | Guion slide por slide de 10 minutos para la exposición presencial. |
-| [`presentacion_pc1.pdf`](presentacion_pc1.pdf) | Sustentación | Deck de 10 diapositivas en formato PDF compilado y listo para sustentar. |
+| [`presentacion_pc1_guion.md`](presentacion_pc1_guion.md) | Sustentación | Guion slide por slide de 10 minutos (13 láminas) para la exposición presencial. |
+| [`presentacion_pc1.pdf`](presentacion_pc1.pdf) | Sustentación | Deck oficial de 13 láminas en formato PDF compilado y listo para sustentar. |
+| [`Lunetra IA - V3 completo.pptx`](Lunetra%20IA%20-%20V3%20completo.pptx) | Sustentación | Archivo editable de presentación en formato Microsoft PowerPoint. |
+| [`Lunetra IA.html`](Lunetra%20IA.html) | Sustentación | Presentación interactiva y animada en formato web autónomo. |
 | [`plantillas/plantilla_1_problem_statement.md`](plantillas/plantilla_1_problem_statement.md) | Fase P | Problem Statement Canvas, consecuencia medible y filtro de IA. |
 | [`plantillas/plantilla_2_data_readiness.md`](plantillas/plantilla_2_data_readiness.md) | Fase R | Inventario, semáforo transparente, prevención de data leakage y calidad. |
 | [`plantillas/plantilla_3_ai_product_canvas.md`](plantillas/plantilla_3_ai_product_canvas.md) | Fase O | AI Product Canvas, diagrama Mermaid, System Prompt, Model Canvas y OKRs. |
@@ -133,7 +147,7 @@ Para sincronizar este repositorio en la cuenta de GitHub designada:
 ```bash
 git init
 git add .
-git commit -m "PC1: propuesta de proyecto — Fases P, R y O (TanqueLleno AI)"
+git commit -m "feat: propuesta de proyecto PC1 — Fases P, R y O (Lunetra IA)"
 git branch -M main
 git remote add origin https://github.com/Los-1000/tanquelleno-ai.git
 git push -u origin main

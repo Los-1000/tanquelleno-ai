@@ -1,7 +1,8 @@
 # Catálogo y Documentación de Fuentes de Datos
 
-**Proyecto:** TanqueLleno AI  
-**Curso:** AD5018 — Inteligencia Artificial para Negocios (UTEC)  
+**Proyecto:** Lunetra IA — Asistente Inteligente de Combustibles  
+**Equipo:** Stefano Canales · Carlos Flores · Carlos Alcazar · Miguel Ángel Mori  
+**Curso:** AD5018 — Inteligencia Artificial para Negocios (UTEC, Framework PROMPT v2.0)  
 **Ubicación:** `datos/`  
 
 ---

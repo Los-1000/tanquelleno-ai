@@ -2,9 +2,9 @@
 **Curso:** AD5018 — Inteligencia Artificial para Negocios  
 **Universidad:** Universidad de Ingeniería y Tecnología (UTEC)  
 **Departamento:** Administración & Negocios Digitales · Malla 2024 — Ciclo 9  
-**Proyecto:** TanqueLleno AI  
-**Integrantes:** `[COMPLETAR: Nombre Completo 1, Nombre Completo 2, Nombre Completo 3, Nombre Completo 4]`  
-**Fecha de entrega:** Semana 6  
+**Proyecto:** Lunetra IA — Asistente Inteligente de Combustibles  
+**Integrantes:** Stefano Canales · Carlos Flores · Carlos Alcazar · Miguel Ángel Mori  
+**Fecha de entrega:** Semana 6 · 19 de septiembre de 2026  
 
 ---
 
@@ -42,11 +42,11 @@ Siguiendo el principio de honestidad técnica, se presenta el plan concreto de a
 
 | Elemento Crítico | Semáforo | Acción Técnica de Mitigación | Responsable Designado | Fecha Comprometida |
 |---|:---:|---|---|:---:|
-| **Variables de mercado internacional** (WTI, Brent, Spot US Gulf Coast) | 🔴 | Ingestión vía API de la U.S. Energy Information Administration (EIA) o FRED mediante script de extracción automatizado `scripts/obtener_macro.py`. | `[COMPLETAR: Responsable 1]` | Semana 7 (Día 3) |
-| **Tipo de cambio bancario S//US$** | 🔴 | Descarga automatizada desde la API pública de series estadísticas del Banco Central de Reserva del Perú (BCRP, serie `PD04638PD`). | `[COMPLETAR: Responsable 2]` | Semana 7 (Día 3) |
-| **Margen de refinación / Crack Spread** | 🔴 | Construcción de variable sintética: diferencia entre precio spot de gasolina refinada en la Costa del Golfo y crudo WTI, con desfase $t-1$. | `[COMPLETAR: Responsable 3]` | Semana 7 (Día 5) |
+| **Variables de mercado internacional** (WTI, Brent, Spot US Gulf Coast) | 🔴 | Ingestión vía API de la U.S. Energy Information Administration (EIA) o FRED mediante script de extracción automatizado `scripts/obtener_macro.py`. | Carlos Flores (Ingeniería de Datos) | Semana 7 (Día 3) |
+| **Tipo de cambio bancario S//US$** | 🔴 | Descarga automatizada desde la API pública de series estadísticas del Banco Central de Reserva del Perú (BCRP, serie `PD04638PD`). | Miguel Ángel Mori (Data Pipelines) | Semana 7 (Día 3) |
+| **Margen de refinación / Crack Spread** | 🔴 | Construcción de variable sintética: diferencia entre precio spot de gasolina refinada en la Costa del Golfo y crudo WTI, con desfase $t-1$. | Stefano Canales (Estrategia Analítica) | Semana 7 (Día 5) |
 | **Ausencia de geolocalización en grifos** | 🔴 | **Decisión de delimitación de alcance:** No se forzará inferencia geográfica ficticia ni scraping no regulado. El producto se delimita a nivel departamental y distribución estadística global. | Equipo Completo | Cerrado en PC1 |
-| **Desbalance de clases (H2)** | 🟡 | Implementación de técnicas de ponderación de clases (`class_weight='balanced'`), remuestreo temporal y función de pérdida asimétrica. | `[COMPLETAR: Responsable 1]` | Semana 8 |
+| **Desbalance de clases (H2)** | 🟡 | Implementación de técnicas de ponderación de clases (`class_weight='balanced'`), remuestreo temporal y función de pérdida asimétrica. | Carlos Alcazar (Modelado Predictivo) | Semana 8 |
 
 ---
 
@@ -140,6 +140,6 @@ Analizando las 79 variaciones mensuales consecutivas ($\Delta P_t = P_t - P_{t-1
 3. **Riesgo en la fuente:** **Nulo / Bajo**.
 
 ### 7.2 Tratamiento de Privacidad en el MVP (Privacy by Design)
-- **Cero captura de PII (Personally Identifiable Information):** El MVP de TanqueLleno AI operará sin registro obligatorio de usuarios, sin almacenar nombres, correos electrónicos, placas de vehículos ni números telefónicos.
+- **Cero captura de PII (Personally Identifiable Information):** El MVP de Lunetra IA operará sin registro obligatorio de usuarios, sin almacenar nombres, correos electrónicos, placas de vehículos ni números telefónicos.
 - **Sin geolocalización GPS activa:** La interacción del usuario consistirá únicamente en seleccionar su departamento en un menú desplegable y definir su tipo de gasolina de interés.
 - **Garantía ética:** Al no recopilarse datos personales, el producto se mantiene fuera del ámbito de registro de bancos de datos personales de la Autoridad Nacional de Protección de Datos Personales (ANPDP - MINJUSDH), garantizando un diseño ético y seguro.
