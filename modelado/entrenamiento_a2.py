@@ -1,6 +1,6 @@
 """
 ===============================================================================
-PROYECTO: TanqueLleno AI — Fase M (Modelado)
+PROYECTO: Lunetra IA — Fase M (Modelado)
 ARCHIVO:  modelado/entrenamiento_a2.py
 DESCRIPCIÓN:
     Entrenamiento del componente analítico A2: clasificador de la tendencia del
@@ -197,7 +197,7 @@ def construir_candidatos() -> dict:
 # -----------------------------------------------------------------------------
 def main(familia: str = "REGULAR") -> dict:
     print("=" * 78)
-    print("ENTRENAMIENTO DEL COMPONENTE ANALÍTICO A2 — TanqueLleno AI")
+    print("ENTRENAMIENTO DEL COMPONENTE ANALÍTICO A2 — Lunetra IA")
     print("=" * 78)
 
     os.makedirs(config.MODELOS_DIR, exist_ok=True)

@@ -1,6 +1,6 @@
 """
 ===============================================================================
-PROYECTO: TanqueLleno AI — Fase M (Modelado)
+PROYECTO: Lunetra IA — Fase M (Modelado)
 ARCHIVO:  src/tanquelleno/config.py
 DESCRIPCIÓN:
     Constantes congeladas del contrato de modelado declarado en la PC1.
@@ -58,7 +58,9 @@ P_ESTRELLA = 0.25  # Umbral de decisión para "SUBE" = C_FP / (C_FN + C_FP)
 # Metas comprometidas en los OKR (congeladas en PC1, semana 6).
 META_MACRO_F1 = 0.55
 META_RECALL_SUBE = 0.70
-BASELINE_MACRO_F1_DECLARADO = 0.33
+# Baseline de persistencia medido en el test ciego (ver reportes/metricas_a2.json
+# y analisis/fase_m_resultados.md); no es una meta, se actualiza con lo medido.
+BASELINE_MACRO_F1_DECLARADO = 0.0833
 
 GALONES_POR_TANQUEADA = 8
 

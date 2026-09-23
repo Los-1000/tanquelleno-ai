@@ -1,6 +1,6 @@
 """
 ===============================================================================
-PROYECTO: TanqueLleno AI — Fase M (Modelado)
+PROYECTO: Lunetra IA — Fase M (Modelado)
 ARCHIVO:  src/tanquelleno/datos.py
 DESCRIPCIÓN:
     Capa única de carga y saneamiento de datos. Todo script del proyecto lee
@@ -12,20 +12,12 @@ DESCRIPCIÓN:
 
 from __future__ import annotations
 
-import io
 import os
-import re
 
 import numpy as np
 import pandas as pd
 
 from . import config
-
-# El scraper de Lima/Callao hace append de cada snapshot sin escribir el salto
-# de línea final, por lo que la última fila de un snapshot queda concatenada con
-# la primera del siguiente: ..."26.99""2026-09-16T22:06:15-0500","158833",...
-# Este patrón detecta la frontera: comilla de cierre seguida de un timestamp ISO.
-_PATRON_FILAS_PEGADAS = re.compile(r'"(?="20\d\d-\d\d-\d\dT)')
 
 
 # -----------------------------------------------------------------------------

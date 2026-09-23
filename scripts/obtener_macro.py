@@ -1,6 +1,6 @@
 """
 ===============================================================================
-PROYECTO: TanqueLleno AI — Fase M (Modelado)
+PROYECTO: Lunetra IA — Fase M (Modelado)
 ARCHIVO:  scripts/obtener_macro.py
 DESCRIPCIÓN:
     Ingesta de las variables macroeconómicas líderes que la Fase R declaró en

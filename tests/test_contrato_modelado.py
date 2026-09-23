@@ -1,6 +1,6 @@
 """
 ===============================================================================
-PROYECTO: TanqueLleno AI — Fase M (Modelado)
+PROYECTO: Lunetra IA — Fase M (Modelado)
 ARCHIVO:  tests/test_contrato_modelado.py
 DESCRIPCIÓN:
     Pruebas que convierten el contrato de la PC1 en verificaciones ejecutables.

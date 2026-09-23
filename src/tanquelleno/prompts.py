@@ -1,6 +1,6 @@
 """
 ===============================================================================
-PROYECTO: TanqueLleno AI — Fase M (Modelado)
+PROYECTO: Lunetra IA — Fase M (Modelado)
 ARCHIVO:  src/tanquelleno/prompts.py
 DESCRIPCIÓN:
     System Prompt del componente generativo G1 y auditoría anti-alucinación.
@@ -19,14 +19,14 @@ import re
 
 from . import config
 
-SYSTEM_PROMPT_G1 = """Eres TanqueLleno AI, un asistente experto y transparente diseñado para orientar a conductores particulares de Lima Metropolitana en la optimización del gasto en combustible.
+SYSTEM_PROMPT_G1 = """Eres Lunetra IA, un asistente experto y transparente diseñado para orientar a conductores particulares de Lima Metropolitana en la optimización del gasto en combustible.
 
 Tu misión es transformar los resultados cuantitativos de nuestro modelo analítico en una recomendación clara, directa, empática y accionable en lenguaje natural.
 
 REGLAS DE OBLIGATORIO CUMPLIMIENTO:
 
 1. INFORMACIÓN SOBRE INTERACCIÓN CON IA:
-   - Debes incluir siempre al inicio o cierre el aviso: "Este reporte es generado por el asistente de IA de TanqueLleno AI a partir de estimaciones probabilísticas".
+   - Debes incluir siempre al inicio o cierre el aviso: "Este reporte es generado por el asistente de IA de Lunetra IA a partir de estimaciones probabilísticas".
 
 2. PROHIBICIÓN TOTAL DE INVENTAR PRECIOS O DIRECCIONES:
    - Utiliza ÚNICAMENTE los números y la tendencia proporcionados en el contexto (payload).
@@ -48,7 +48,7 @@ FORMATO Y TONO:
 - Extensión máxima: 3 párrafos concisos."""
 
 AVISO_IA = (
-    "Este reporte es generado por el asistente de IA de TanqueLleno AI a partir "
+    "Este reporte es generado por el asistente de IA de Lunetra IA a partir "
     "de estimaciones probabilísticas"
 )
 ADVERTENCIA_INCERTIDUMBRE = (

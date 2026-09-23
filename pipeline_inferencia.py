@@ -1,6 +1,6 @@
 """
 ===============================================================================
-PROYECTO: TanqueLleno AI — Fase M (Modelado)
+PROYECTO: Lunetra IA — Fase M (Modelado)
 ARCHIVO:  pipeline_inferencia.py
 DESCRIPCIÓN:
     Pipeline end-to-end del Patrón de Conexión 1 (Modelo -> Lenguaje):
@@ -9,11 +9,11 @@ DESCRIPCIÓN:
         -> payload JSON -> System Prompt G1 -> recomendación en texto
         -> auditoría anti-alucinación (KR2)
 
-    Los percentiles del payload se calculan sobre el padrón real de grifos de
-    Lima y Callao cuando el departamento consultado es Lima; en el resto del
-    país se recurre a la dispersión de la serie departamental, y el payload lo
-    declara en `fuente_percentiles` para no presentar como local un dato que
-    no lo es.
+    Los percentiles del payload se calculan sobre la muestra nacional oficial
+    de grifos (Archivo A, Hallazgo H5) cuando el departamento consultado es
+    Lima; en el resto del país se recurre a la dispersión de la serie
+    departamental, y el payload lo declara en `fuente_percentiles` para no
+    presentar como local un dato que no lo es.
 
 USO:
     python pipeline_inferencia.py --departamento LIMA --nivel-tanque bajo

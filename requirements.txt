@@ -1,4 +1,4 @@
-# TanqueLleno AI — dependencias de la Fase M (Modelado)
+# Lunetra IA — dependencias de la Fase M (Modelado)
 # Instalación:  pip install -r requirements.txt
 # Probado con Python 3.12
 

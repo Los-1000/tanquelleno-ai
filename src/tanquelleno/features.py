@@ -1,6 +1,6 @@
 """
 ===============================================================================
-PROYECTO: TanqueLleno AI — Fase M (Modelado)
+PROYECTO: Lunetra IA — Fase M (Modelado)
 ARCHIVO:  src/tanquelleno/features.py
 DESCRIPCIÓN:
     Construcción del dataset maestro mensual departamental y de la variable
