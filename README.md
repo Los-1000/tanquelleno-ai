@@ -60,18 +60,13 @@ tanquelleno-ai/
 ├── README.md                               <- Carátula, índice general y estado del proyecto
 ├── resumen_ejecutivo.md                    <- Síntesis ejecutiva de P + R + O en una sola página
 ├── cronograma.md                           <- Plan de trabajo detallado de Semana 7 a 13
-<<<<<<< HEAD
 ├── presentacion_pc1_guion.md               <- Guion slide por slide de las 13 láminas para la exposición
 ├── presentacion_pc1.pdf                    <- Deck oficial de 13 láminas en PDF compilado y listo para sustentar
 ├── Lunetra IA - V3 completo.pptx           <- Presentación original de diapositivas en PowerPoint
 ├── Lunetra IA.html                         <- Presentación interactiva animada en HTML
-=======
-├── presentacion_pc1_guion.md               <- Guion slide por slide para la exposición oral
-├── presentacion_pc1.pdf                    <- Deck de diapositivas en PDF compilado y listo para sustentar
 ├── requirements.txt                        <- [Fase M] Dependencias de Python
 ├── Makefile                                <- [Fase M] Atajos reproducibles (make ayuda)
 ├── pipeline_inferencia.py                  <- [Fase M] Pipeline end-to-end: modelo -> payload -> recomendación
->>>>>>> origin/main
 ├── plantillas/
 │   ├── plantilla_1_problem_statement.md    <- Fase P: Problem Statement Canvas y filtro de IA
 │   ├── plantilla_2_data_readiness.md       <- Fase R: Inventario, Data Readiness y protocolo de calidad
@@ -80,15 +75,13 @@ tanquelleno-ai/
 │   ├── config.py                           <- Constantes congeladas del contrato (umbrales, costos, splits)
 │   ├── datos.py                            <- Carga y saneamiento de todas las fuentes
 │   ├── features.py                         <- Dataset maestro, target y auditoría anti-leakage
-│   ├── geo.py                              <- Distancias, vecindad, percentiles y grifo más cercano
 │   └── prompts.py                          <- System Prompt G1 y auditoría anti-alucinación
 ├── modelado/                               <- [Fase M] Scripts de entrenamiento
-│   ├── entrenamiento_a2.py                 <- Componente analítico A2 (tendencia mensual departamental)
-│   └── entrenamiento_posicion.py           <- Modelo de posición de precio por grifo (Lima y Callao)
+│   └── entrenamiento_a2.py                 <- Componente analítico A2 (tendencia mensual departamental)
 ├── scripts/
 │   └── obtener_macro.py                    <- [Fase M] Ingesta de WTI, Brent y tipo de cambio
 ├── tests/
-│   └── test_contrato_modelado.py           <- [Fase M] 22 pruebas del contrato metodológico
+│   └── test_contrato_modelado.py           <- [Fase M] 17 pruebas del contrato metodológico
 ├── analisis/
 │   ├── perfilado_datos.py                  <- Script reproducible que recalcula métricas y genera figuras
 │   ├── hallazgos.md                        <- Documentación exhaustiva de los hallazgos empíricos H1 a H10
@@ -100,11 +93,9 @@ tanquelleno-ai/
 │       └── figura_4_estacionalidad_mensual.png <- Indicio estacional exploratorio en marzo
 ├── datos/
 │   ├── README_datos.md                     <- Catálogo de fuentes, orígenes Osinergmin y políticas
-│   └── lima_callao/                        <- [Fase M] Padrón georreferenciado de grifos (199 estaciones)
-│       ├── README.md                       <- Diccionario, cobertura y límites de la fuente
-│       ├── premium_lima_callao_20260918.csv    <- Corte transversal con lat/lon, distrito, marca y descuento
-│       ├── historico_grifos_lima_callao.csv    <- Cuatro snapshots del scraper (796 filas)
-│       └── mymaps_lima_callao_20260918.csv     <- Mismo corte, formateado para Google MyMaps
+│   ├── historico_precios_combustibles_peru_2020_2026.xlsx <- Versión Excel consolidada (4 hojas)
+│   ├── precios_combustibles_anonimizados_20260301_part1.csv <- Registro diario por grifo (497,156 filas)
+│   └── precios_combustibles_datos_crudos.csv <- Serie histórica mensual departamental (11,227 filas)
 ├── modelos/                                <- [Fase M] Artefactos entrenados (.joblib, no versionados)
 ├── reportes/                               <- [Fase M] Métricas y auditorías en JSON
 └── .gitignore                              <- Filtros estándar para Python, cachés y archivos temporales

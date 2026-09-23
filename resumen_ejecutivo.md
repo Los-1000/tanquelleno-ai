@@ -32,7 +32,7 @@ El producto se estructura desacopladamente bajo el **Patrón de Conexión 1 (Mod
 - **Fecha de Despliegue Comprometida:** **Semana 10** (despliegue anticipado para validar con usuarios antes de la fecha límite del curso).
 
 ### 6. Resultados Clave Comprometidos (OKRs Inmutables)
-1. **KR 1 (Predictivo):** Superar el Macro-F1 del baseline de persistencia (0.33) alcanzando **Macro-F1 $\ge$ 0.55** y **Recall en alzas $\ge$ 70%** en el test set ciego (2026).
+1. **KR 1 (Predictivo):** Superar el Macro-F1 del baseline de persistencia (0.0833) alcanzando **Macro-F1 $\ge$ 0.55** y **Recall en alzas $\ge$ 70%** en el test set ciego (2026).
 2. **KR 2 (Generativo):** Lograr **100% de recomendaciones sin alucinación de precios** en auditoría controlada ($N \ge 50$ evaluaciones).
 3. **KR 3 (Operacional):** Aplicación web 100% operativa en producción en **Vercel + Supabase** con latencia inferior a 1.5 segundos en la **Semana 10**.
 4. **KR 4 (Negocio):** Habilitar una banda de precios referencial que capture al menos S/ 8.00 de ahorro por carga frente al P90.
