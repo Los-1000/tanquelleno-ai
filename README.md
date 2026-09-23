@@ -21,6 +21,7 @@ Repositorio oficial del proyecto desarrollado para el curso **AD5018 — Intelig
   - Miguel Ángel Mori
 - **Usuario GitHub / Organización:** [Los-1000](https://github.com/Los-1000)
 - **Repositorio Oficial:** [tanquelleno-ai](https://github.com/Los-1000/tanquelleno-ai)
+- **Video de Sustentación:** [Ver en Google Drive](https://drive.google.com/file/d/1k44TgKIzHyvH7aycms4T9TaS6jEdaGAw/view?usp=sharing)
 - **Fecha de Entrega / Sustentación:** 19 de septiembre de 2026 · Ciclo 2026-II
 
 ---
@@ -112,6 +113,7 @@ tanquelleno-ai/
 | [`presentacion_pc1.pdf`](presentacion_pc1.pdf) | Sustentación | Deck oficial de 13 láminas en formato PDF compilado y listo para sustentar. |
 | [`Lunetra IA - V3 completo.pptx`](Lunetra%20IA%20-%20V3%20completo.pptx) | Sustentación | Archivo editable de presentación en formato Microsoft PowerPoint. |
 | [`Lunetra IA.html`](Lunetra%20IA.html) | Sustentación | Presentación interactiva y animada en formato web autónomo. |
+| [Video de Sustentación](https://drive.google.com/file/d/1k44TgKIzHyvH7aycms4T9TaS6jEdaGAw/view?usp=sharing) | Sustentación | Grabación de la exposición oral (alojada en Google Drive por tamaño de archivo). |
 | [`plantillas/plantilla_1_problem_statement.md`](plantillas/plantilla_1_problem_statement.md) | Fase P | Problem Statement Canvas, consecuencia medible y filtro de IA. |
 | [`plantillas/plantilla_2_data_readiness.md`](plantillas/plantilla_2_data_readiness.md) | Fase R | Inventario, semáforo transparente, prevención de data leakage y calidad. |
 | [`plantillas/plantilla_3_ai_product_canvas.md`](plantillas/plantilla_3_ai_product_canvas.md) | Fase O | AI Product Canvas, diagrama Mermaid, System Prompt, Model Canvas y OKRs. |
