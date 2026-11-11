@@ -17,7 +17,7 @@
 | 6 | Resultados del modelo en costos | 10:00–12:00 | | Matriz de confusión en soles: costo por decisión S/ 1.90 → S/ 0.54 (−72%). Recall de alzas 94%. Macro-F1 0.21 < 0.55: lo decimos de frente y explicamos el trade-off. | `mvp/evidencia/resultados_okr.md` |
 | 7 | La capa de lenguaje y su métrica | 12:00–13:30 | | Gemini solo ve el payload; cada respuesta se audita; si inventa una cifra se descarta. % de cumplimiento crudo vs. final. | `auditoria_llm.json`, test L7 |
 | 8 | Pruebas con usuarios | 13:30–15:30 | | N usuarios reales, cuántos completaron sin ayuda, citas textuales, caso límite real y el cambio que hicimos por ellos. | `mvp/evidencia/pruebas_usuario.md` |
-| 9 | OKRs: meta vs. real | 15:30–16:30 | | Tabla de los 4 KR de la PC1 sin cambiar metas: 2 cumplen, 1 no, 1 parcial. | `resultados_okr.md` |
+| 9 | OKRs: meta vs. real | 15:30–16:30 | | Tabla de los KR de la PC1 sin cambiar metas: KR1a (recall) y KR4 cumplen; KR1b (Macro-F1) no; KR2 parcial (Gemini 27/27 sin alucinar, falta N ≥ 50); KR3 depende del despliegue y la latencia con Gemini (p50 2.9 s) supera 1.5 s. | `resultados_okr.md` |
 | 10 | Riesgos y Ley N.° 29733 | 16:30–18:00 | | 3 riesgos: modelo (cambio de régimen), lenguaje (alucinación), acción (exceso de confianza). No pedimos datos personales; datos de entrenamiento anonimizados. | Plantilla 4 |
 | 11 | Qué sigue y cierre | 18:00–19:00 | | Variables macro, recalibrar P\* por régimen, feedback anónimo. Frase final. | — |
 | — | Margen | 19:00–20:00 | | Colchón para la demo. | — |

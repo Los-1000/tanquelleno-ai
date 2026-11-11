@@ -106,8 +106,12 @@ Sin `GEMINI_API_KEY` el MVP funciona igual con la redacción determinista de res
 
 ```bash
 cd mvp/web
-GEMINI_API_KEY=xxx npm run auditar-llm
+# la clave va en mvp/web/.env.local (GEMINI_API_KEY=...), ignorado por git
+npm run auditar-llm
 ```
+
+El plan gratuito de Gemini permite 20 peticiones por día y por modelo; el script espera y
+reintenta ante 429, pero para los 72 casos en una sola corrida se necesita una clave con facturación.
 
 Recorre 72 casos (24 departamentos × 3 niveles de tanque) contra Gemini real y guarda
 `mvp/evidencia/auditoria_llm.json` con: % de respuestas crudas sin cifras inventadas, % con aviso
