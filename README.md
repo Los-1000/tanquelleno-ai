@@ -21,6 +21,7 @@ Repositorio oficial del proyecto desarrollado para el curso **AD5018 — Intelig
   - Miguel Ángel Mori
 - **Usuario GitHub / Organización:** [Los-1000](https://github.com/Los-1000)
 - **Repositorio Oficial:** [tanquelleno-ai](https://github.com/Los-1000/tanquelleno-ai)
+- **MVP (PC2):** https://lunetra-ai.vercel.app · instrucciones para el evaluador en [`mvp/README_mvp.md`](mvp/README_mvp.md)
 - **Video de Sustentación:** [Ver en Google Drive](https://drive.google.com/file/d/1k44TgKIzHyvH7aycms4T9TaS6jEdaGAw/view?usp=sharing)
 - **Fecha de Entrega / Sustentación:** 19 de septiembre de 2026 · Ciclo 2026-II
 
@@ -35,22 +36,22 @@ En Lima Metropolitana, los conductores particulares que usan su auto a diario en
 Lunetra IA combina un **componente analítico de Machine Learning (Nivel A2 — Eje de Ambición)** basado en **Regresión Logística Regularizada (L2 Ridge / ElasticNet) con Calibración Sigmoide (Platt Scaling)** evaluada formalmente frente al **Baseline Obligatorio de Persistencia** (descartando modelos sobreparametrizados de ensamble o redes profundas inviables para una serie corta de 80 meses), optimizando un umbral asimétrico de decisión ($P^* = 0.25$, porque no avisar una subida cuesta 5 veces más que una falsa alarma), con un **componente generativo (Nivel G1)** que responde en una frase clara y empática: **"Carga hoy"** o **"Puedes esperar"**, junto con la banda de precio justo de referencia, sin alucinaciones numéricas. Detrás hay seis años de datos; adelante, una frase.
 
 ### Stack Tecnológico de Producción
-- **Frontend & Edge Functions:** Next.js (React) alojado en la red global de **Vercel** (latencia < 1.5s).
-- **Base de Datos & Almacenamiento:** **Supabase** (PostgreSQL Cloud administrado con PostgREST).
-- **Modelado Analítico (A2):** Python 3.12 / Scikit-Learn (Regresión Logística Regularizada con Calibración Platt).
-- **Motor Generativo (G1):** Google Gemini Flash API con System Prompt blindado y contexto cerrado.
+- **Frontend & funciones serverless:** Next.js (React) desplegado en **Vercel** ([`mvp/web`](mvp/web)).
+- **Modelado Analítico (A2):** Python 3.12 / Scikit-Learn para entrenar (Regresión Logística Regularizada, elegida en validación frente a su versión calibrada con Platt). Los coeficientes se exportan a JSON y el MVP ejecuta la misma inferencia en el servidor, con un test de paridad Python ↔ TypeScript.
+- **Motor Generativo (G1):** Google Gemini Flash API con System Prompt blindado, contexto cerrado, auditoría anti-alucinación de cada respuesta y redacción determinista de respaldo.
+- **Base de datos:** Supabase quedó fuera del MVP (datos de inferencia estáticos y mensuales); ver desviación declarada en [`mvp/evidencia/resultados_okr.md`](mvp/evidencia/resultados_okr.md).
 
 ---
 
-## 3. Estado del Proyecto (Semana 6)
+## 3. Estado del Proyecto (Semana 13)
 
 | Fase Metodológica (PROMPT v2.0) | Semanas | Estado | Entregables Clave |
 |---|:---:|:---:|---|
 | **Fase P (Problem Statement Canvas)** | S1 – S3 | 🟢 **Cerrada** | Canvas de problema sin tecnología, cuantificación de sobrecosto (H5), filtro de IA y componentes A2 + G1. |
 | **Fase R (Data Readiness Assessment)** | S4 – S5 | 🟢 **Cerrada** | Inventario oficial, semáforo transparente, protocolo anti-leakage y saneamiento de anomalías (16 valores fuera de rango). |
-| **Fase M (Modelado & Despliegue)** | S7 – S11 | 🟡 **En curso** | Ingestión macro ($t-1$), entrenamiento de Regresión Logística Regularizada calibrada, pipeline de inferencia end-to-end con auditoría KR2 (0% alucinaciones) y **despliegue en Vercel + Supabase en Semana 10**. Resultados en [`analisis/fase_m_resultados.md`](analisis/fase_m_resultados.md). |
-| **Fase P2 (Pilotaje e Impacto)** | S12 | ⚪ *Pendiente* | Evaluación sobre test set ciego (2026), medición de KRs y elaboración de la Plantilla 4. |
-| **Fase T (Transferencia & Cierre PC2)** | S13 | ⚪ *Pendiente* | Manual de entrega técnica, video demo y sustentación final ante jurado. |
+| **Fase M (Modelado & Despliegue)** | S7 – S11 | 🟢 **MVP construido** | Regresión Logística Regularizada, pipeline end-to-end con auditoría KR2 y **MVP Next.js en [`mvp/web`](mvp/web)** con el modelo y Gemini integrados (120 pruebas). Pendiente: publicar en Vercel y las variables macro. Resultados en [`analisis/fase_m_resultados.md`](analisis/fase_m_resultados.md). |
+| **Fase P2 (Pilotaje e Impacto)** | S12 | 🟡 **En curso** | KRs medidos en [`mvp/evidencia/resultados_okr.md`](mvp/evidencia/resultados_okr.md), [Plantilla 4](plantillas/plantilla_4_impact_assessment.md) completa y protocolo de [pruebas con usuarios](mvp/evidencia/pruebas_usuario.md) (faltan los usuarios reales). |
+| **Fase T (Transferencia & Cierre PC2)** | S13 | 🟡 **En curso** | Manual del evaluador ([`mvp/README_mvp.md`](mvp/README_mvp.md)) y [guion de la PC2](presentacion_pc2_guion.md). Falta `presentacion_pc2.pdf` y el ensayo con demo en vivo. |
 
 ---
 
@@ -68,10 +69,18 @@ tanquelleno-ai/
 ├── requirements.txt                        <- [Fase M] Dependencias de Python
 ├── Makefile                                <- [Fase M] Atajos reproducibles (make ayuda)
 ├── pipeline_inferencia.py                  <- [Fase M] Pipeline end-to-end: modelo -> payload -> recomendación
+├── presentacion_pc2_guion.md               <- [PC2] Guion de 20 min con demo en vivo y preguntas probables
+├── mvp/                                    <- [PC2] Producto mínimo viable desplegable
+│   ├── README_mvp.md                       <- URL pública, instrucciones para el evaluador y despliegue
+│   ├── evidencia/
+│   │   ├── pruebas_usuario.md              <- Protocolo, registro de usuarios, casos límite y cambios
+│   │   └── resultados_okr.md               <- Resultado real de cada KR vs. su meta de la PC1
+│   └── web/                                <- App Next.js (Vercel): modelo A2 + Gemini + auditoría
 ├── plantillas/
 │   ├── plantilla_1_problem_statement.md    <- Fase P: Problem Statement Canvas y filtro de IA
 │   ├── plantilla_2_data_readiness.md       <- Fase R: Inventario, Data Readiness y protocolo de calidad
-│   └── plantilla_3_ai_product_canvas.md    <- Fase O: AI Product Canvas, System Prompt, Arquitectura y OKRs
+│   ├── plantilla_3_ai_product_canvas.md    <- Fase O: AI Product Canvas, System Prompt, Arquitectura y OKRs
+│   └── plantilla_4_impact_assessment.md    <- Fase P2: Riesgos, mitigaciones, Ley N.° 29733 e impacto
 ├── src/tanquelleno/                        <- [Fase M] Paquete reutilizable del proyecto
 │   ├── config.py                           <- Constantes congeladas del contrato (umbrales, costos, splits)
 │   ├── datos.py                            <- Carga y saneamiento de todas las fuentes
@@ -80,7 +89,8 @@ tanquelleno-ai/
 ├── modelado/                               <- [Fase M] Scripts de entrenamiento
 │   └── entrenamiento_a2.py                 <- Componente analítico A2 (tendencia mensual departamental)
 ├── scripts/
-│   └── obtener_macro.py                    <- [Fase M] Ingesta de WTI, Brent y tipo de cambio
+│   ├── obtener_macro.py                    <- [Fase M] Ingesta de WTI, Brent y tipo de cambio
+│   └── exportar_modelo_web.py             <- [PC2] Exporta el modelo A2 a JSON para el MVP
 ├── tests/
 │   └── test_contrato_modelado.py           <- [Fase M] 17 pruebas del contrato metodológico
 ├── analisis/
@@ -197,7 +207,7 @@ Cifras regeneradas y auditadas por `make todo`. Detalle e interpretación en [`a
 | **KR1** · Recall en Alzas | $\ge$ 70% | **93.8%** (con umbral $P^* = 0.25$) | ✅ **Cumple (+23.8 pp)** |
 | **KR1** · Macro-F1 en Test Ciego | $\ge$ 0.55 | 0.4418 con argmax · 0.2058 con $P^* = 0.25$ | ❌ No alcanzada (supera 5.3x al baseline de persistencia: 0.0833) |
 | **KR2** · Recomendaciones sin Alucinación | 100% ($N \ge 50$) | **100%** sobre 60 casos evaluados | ✅ **Cumple** |
-| **KR3** · Despliegue Operativo en la Nube | 100% en Semana 10 | Arquitectura definida en Vercel + Supabase | ⚪ Semana 10 |
+| **KR3** · Despliegue Operativo en la Nube | 100% en Semana 10 | MVP Next.js construido y probado ([`mvp/web`](mvp/web)); falta publicar en Vercel | 🟡 Pendiente |
 | **KR4** · Ahorro por Carga frente a Dispersión | $\ge$ S/ 8.00 | **S/ 16.96** (Brecha oficial P90–P10 de S/ 2.12/galón en 8 galones) | ✅ **Cumple** |
 
 Hallazgo destacado: La brecha estructural entre estaciones de servicio en Lima alcanza S/ 2.12 por galón (Hallazgo H5). Un conductor que utiliza la banda referencial evita pagar hasta S/ 16.96 adicionales por tanqueada semanal.

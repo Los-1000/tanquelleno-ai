@@ -1,0 +1,866 @@
+[
+  {
+    "departamento": "AMAZONAS",
+    "mes_base": "2026-08-01",
+    "features": [
+      20.16,
+      20.59,
+      22.33,
+      -0.4299999999999997,
+      -1.7399999999999984,
+      21.026666666666667,
+      1.1490140701198708,
+      -0.8666666666666671,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 15.21,
+      "p50_mediana": 16.88,
+      "p90_mercado": 22.03,
+      "brecha_dispersion": 6.82,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 54.56,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.2502521402674132,
+        "SUBE": 0.15427974564166236,
+        "BAJA": 0.5954681140909244
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "MEDIA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "ANCASH",
+    "mes_base": "2026-08-01",
+    "features": [
+      18.03,
+      18.68,
+      20.17,
+      -0.6499999999999986,
+      -1.490000000000002,
+      18.959999999999997,
+      1.0971326264404506,
+      -0.9299999999999962,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 13.79,
+      "p50_mediana": 16.14,
+      "p90_mercado": 20.33,
+      "brecha_dispersion": 6.54,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 52.3,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.3866190092023342,
+        "SUBE": 0.22480584941237167,
+        "BAJA": 0.38857514138529414
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "BAJA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "APURIMAC",
+    "mes_base": "2026-08-01",
+    "features": [
+      19.08,
+      19.63,
+      20.71,
+      -0.5500000000000007,
+      -1.0800000000000018,
+      19.806666666666665,
+      0.8292365967162201,
+      -0.7266666666666666,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 14.57,
+      "p50_mediana": 17.04,
+      "p90_mercado": 20.7,
+      "brecha_dispersion": 6.13,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 49.03,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.32325921395134216,
+        "SUBE": 0.1800811150428789,
+        "BAJA": 0.49665967100577896
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "MEDIA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "AREQUIPA",
+    "mes_base": "2026-08-01",
+    "features": [
+      18.48,
+      19.23,
+      20.6,
+      -0.75,
+      -1.370000000000001,
+      19.436666666666667,
+      1.0750038759621494,
+      -0.956666666666667,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 13.79,
+      "p50_mediana": 16.44,
+      "p90_mercado": 20.55,
+      "brecha_dispersion": 6.76,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 54.1,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.3779650648520489,
+        "SUBE": 0.2167042277720839,
+        "BAJA": 0.40533070737586724
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "BAJA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "AYACUCHO",
+    "mes_base": "2026-08-01",
+    "features": [
+      18.42,
+      18.74,
+      20.18,
+      -0.31999999999999673,
+      -1.4400000000000013,
+      19.11333333333333,
+      0.9375144443332869,
+      -0.693333333333328,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 14.1,
+      "p50_mediana": 16.53,
+      "p90_mercado": 20.19,
+      "brecha_dispersion": 6.09,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 48.69,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.3246353781273122,
+        "SUBE": 0.19117202173186948,
+        "BAJA": 0.48419260014081833
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "MEDIA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "CAJAMARCA",
+    "mes_base": "2026-08-01",
+    "features": [
+      19.07,
+      19.49,
+      20.74,
+      -0.41999999999999815,
+      -1.25,
+      19.766666666666666,
+      0.8686963412686307,
+      -0.6966666666666654,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 14.41,
+      "p50_mediana": 16.54,
+      "p90_mercado": 20.74,
+      "brecha_dispersion": 6.33,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 50.67,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.3057191702982988,
+        "SUBE": 0.17486048192235396,
+        "BAJA": 0.5194203477793472
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "MEDIA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "CUSCO",
+    "mes_base": "2026-08-01",
+    "features": [
+      19.03,
+      19.41,
+      20.55,
+      -0.379999999999999,
+      -1.1400000000000006,
+      19.66333333333333,
+      0.7910330797971955,
+      -0.6333333333333293,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 13.78,
+      "p50_mediana": 16.69,
+      "p90_mercado": 20.91,
+      "brecha_dispersion": 7.13,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 57.02,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.30307722169919665,
+        "SUBE": 0.17105779594328427,
+        "BAJA": 0.525864982357519
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "MEDIA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "HUANCAVELICA",
+    "mes_base": "2026-08-01",
+    "features": [
+      19.08,
+      19.5,
+      20.54,
+      -0.4200000000000017,
+      -1.0399999999999991,
+      19.706666666666663,
+      0.7516204716033784,
+      -0.6266666666666652,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 14.61,
+      "p50_mediana": 16.79,
+      "p90_mercado": 20.9,
+      "brecha_dispersion": 6.29,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 50.29,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.3062873169251011,
+        "SUBE": 0.1703222753702887,
+        "BAJA": 0.5233904077046102
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "MEDIA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "HUANUCO",
+    "mes_base": "2026-08-01",
+    "features": [
+      18.82,
+      19.49,
+      20.67,
+      -0.6699999999999982,
+      -1.1800000000000033,
+      19.659999999999997,
+      0.9366429415737711,
+      -0.8399999999999963,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 14.25,
+      "p50_mediana": 16.75,
+      "p90_mercado": 20.62,
+      "brecha_dispersion": 6.37,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 50.99,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.35185962884047295,
+        "SUBE": 0.1977929150555277,
+        "BAJA": 0.45034745610399946
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "MEDIA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "ICA",
+    "mes_base": "2026-08-01",
+    "features": [
+      17.73,
+      18.38,
+      19.84,
+      -0.6499999999999986,
+      -1.4600000000000009,
+      18.650000000000002,
+      1.0806016842481139,
+      -0.9200000000000017,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 13.57,
+      "p50_mediana": 15.82,
+      "p90_mercado": 19.87,
+      "brecha_dispersion": 6.3,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 50.37,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.4014470236294912,
+        "SUBE": 0.23209427960416656,
+        "BAJA": 0.3664586967663423
+      },
+      "tendencia_predicha": "MANTIENE",
+      "confianza": "BAJA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "JUNIN",
+    "mes_base": "2026-08-01",
+    "features": [
+      18.15,
+      18.69,
+      19.77,
+      -0.5400000000000027,
+      -1.0799999999999983,
+      18.869999999999997,
+      0.8248636250919411,
+      -0.7199999999999989,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 13.7,
+      "p50_mediana": 16.02,
+      "p90_mercado": 20.11,
+      "brecha_dispersion": 6.42,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 51.34,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.3700828518072754,
+        "SUBE": 0.20500607610642693,
+        "BAJA": 0.4249110720862977
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "BAJA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "LA LIBERTAD",
+    "mes_base": "2026-08-01",
+    "features": [
+      18.99,
+      19.53,
+      20.83,
+      -0.5400000000000027,
+      -1.2999999999999972,
+      19.783333333333335,
+      0.9457977232649118,
+      -0.7933333333333366,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 14.82,
+      "p50_mediana": 17.02,
+      "p90_mercado": 20.82,
+      "brecha_dispersion": 6.0,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 47.98,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.3253644365783281,
+        "SUBE": 0.1863288107734613,
+        "BAJA": 0.4883067526482107
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "MEDIA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "LAMBAYEQUE",
+    "mes_base": "2026-08-01",
+    "features": [
+      18.03,
+      18.54,
+      20.01,
+      -0.509999999999998,
+      -1.4700000000000024,
+      18.86,
+      1.0280564186851797,
+      -0.8299999999999983,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 13.89,
+      "p50_mediana": 16.16,
+      "p90_mercado": 20.08,
+      "brecha_dispersion": 6.19,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 49.53,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.3690461360730371,
+        "SUBE": 0.21516071639231873,
+        "BAJA": 0.4157931475346442
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "BAJA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "LIMA",
+    "mes_base": "2026-08-01",
+    "features": [
+      18.07,
+      18.47,
+      19.9,
+      -0.3999999999999986,
+      -1.4299999999999997,
+      18.813333333333333,
+      0.962098401065695,
+      -0.7433333333333323,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 13.39,
+      "p50_mediana": 14.3,
+      "p90_mercado": 15.7,
+      "brecha_dispersion": 2.12,
+      "n_estaciones": 4428,
+      "ahorro_por_tanqueada": 16.96,
+      "fuente_percentiles": "muestra_osinergmin_grifos_feb_2026 (4,428 estaciones)"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.35308119647604536,
+        "SUBE": 0.20600919066100518,
+        "BAJA": 0.4409096128629494
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "BAJA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "LORETO",
+    "mes_base": "2026-08-01",
+    "features": [
+      18.82,
+      19.13,
+      20.88,
+      -0.3099999999999987,
+      -1.75,
+      19.609999999999996,
+      1.1107204868912155,
+      -0.7899999999999956,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 16.0,
+      "p50_mediana": 17.42,
+      "p90_mercado": 20.96,
+      "brecha_dispersion": 4.96,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 39.69,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.30102063255507766,
+        "SUBE": 0.18609653953575503,
+        "BAJA": 0.5128828279091673
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "MEDIA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "MADRE DE DIOS",
+    "mes_base": "2026-08-01",
+    "features": [
+      22.84,
+      22.81,
+      24.04,
+      0.030000000000001137,
+      -1.2300000000000004,
+      23.23,
+      0.7016409338113753,
+      -0.39000000000000057,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 15.45,
+      "p50_mediana": 18.95,
+      "p90_mercado": 24.7,
+      "brecha_dispersion": 9.25,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 73.98,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.10144389375645943,
+        "SUBE": 0.06194683032821562,
+        "BAJA": 0.8366092759153249
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "ALTA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "MOQUEGUA",
+    "mes_base": "2026-08-01",
+    "features": [
+      18.74,
+      19.21,
+      20.9,
+      -0.4700000000000024,
+      -1.6899999999999977,
+      19.616666666666664,
+      1.1359724175054156,
+      -0.8766666666666652,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 14.26,
+      "p50_mediana": 16.77,
+      "p90_mercado": 20.89,
+      "brecha_dispersion": 6.63,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 53.05,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.326362441783641,
+        "SUBE": 0.1974799218045206,
+        "BAJA": 0.47615763641183834
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "MEDIA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "PASCO",
+    "mes_base": "2026-08-01",
+    "features": [
+      18.7,
+      19.08,
+      20.33,
+      -0.379999999999999,
+      -1.25,
+      19.37,
+      0.8528188553261093,
+      -0.6700000000000017,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 14.37,
+      "p50_mediana": 16.56,
+      "p90_mercado": 20.59,
+      "brecha_dispersion": 6.22,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 49.74,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.31949301959011966,
+        "SUBE": 0.18270690434731182,
+        "BAJA": 0.49780007606256854
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "MEDIA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "PIURA",
+    "mes_base": "2026-08-01",
+    "features": [
+      18.61,
+      18.83,
+      20.53,
+      -0.21999999999999886,
+      -1.7000000000000028,
+      19.323333333333334,
+      1.0507774899250217,
+      -0.7133333333333347,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 14.52,
+      "p50_mediana": 15.97,
+      "p90_mercado": 20.51,
+      "brecha_dispersion": 5.99,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 47.89,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.3000672238836752,
+        "SUBE": 0.18552300957991424,
+        "BAJA": 0.5144097665364106
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "MEDIA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "PUNO",
+    "mes_base": "2026-08-01",
+    "features": [
+      19.27,
+      19.81,
+      21.11,
+      -0.5399999999999991,
+      -1.3000000000000007,
+      20.063333333333333,
+      0.94579772326489,
+      -0.793333333333333,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 14.25,
+      "p50_mediana": 16.9,
+      "p90_mercado": 21.08,
+      "brecha_dispersion": 6.83,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 54.63,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.31093842975961755,
+        "SUBE": 0.17837910774462182,
+        "BAJA": 0.5106824624957605
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "MEDIA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "SAN MARTIN",
+    "mes_base": "2026-08-01",
+    "features": [
+      19.6,
+      20.05,
+      21.97,
+      -0.4499999999999993,
+      -1.9199999999999982,
+      20.540000000000003,
+      1.2586897949851217,
+      -0.9400000000000013,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 14.82,
+      "p50_mediana": 17.15,
+      "p90_mercado": 21.95,
+      "brecha_dispersion": 7.12,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 56.99,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.27932940536139594,
+        "SUBE": 0.1758375574827596,
+        "BAJA": 0.5448330371558445
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "MEDIA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "TACNA",
+    "mes_base": "2026-08-01",
+    "features": [
+      19.13,
+      20.04,
+      21.35,
+      -0.9100000000000001,
+      -1.3100000000000023,
+      20.173333333333332,
+      1.1159898446370036,
+      -1.043333333333333,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 14.52,
+      "p50_mediana": 16.89,
+      "p90_mercado": 21.29,
+      "brecha_dispersion": 6.77,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 54.13,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.3658935331535003,
+        "SUBE": 0.20922269685207018,
+        "BAJA": 0.4248837699944296
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "BAJA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "TUMBES",
+    "mes_base": "2026-08-01",
+    "features": [
+      19.54,
+      19.82,
+      20.71,
+      -0.28000000000000114,
+      -0.8900000000000006,
+      20.023333333333333,
+      0.6109282554710159,
+      -0.4833333333333343,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 14.77,
+      "p50_mediana": 16.31,
+      "p90_mercado": 20.65,
+      "brecha_dispersion": 5.88,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 47.02,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.2649170561013203,
+        "SUBE": 0.14568341180371777,
+        "BAJA": 0.589399532094962
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "MEDIA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  },
+  {
+    "departamento": "UCAYALI",
+    "mes_base": "2026-08-01",
+    "features": [
+      16.67,
+      16.59,
+      18.35,
+      0.08000000000000185,
+      -1.7600000000000016,
+      17.203333333333333,
+      0.9938477415244845,
+      -0.5333333333333314,
+      -0.44499999999999956,
+      -0.8660254037844385,
+      -0.5000000000000004
+    ],
+    "mercado": {
+      "p10_mercado": 13.22,
+      "p50_mediana": 15.06,
+      "p90_mercado": 19.2,
+      "brecha_dispersion": 5.97,
+      "n_estaciones": 0,
+      "ahorro_por_tanqueada": 47.8,
+      "fuente_percentiles": "serie_departamental_mensual_ultimos_12_meses"
+    },
+    "esperado_python": {
+      "probabilidades": {
+        "MANTIENE": 0.3555783038957157,
+        "SUBE": 0.2283406278589596,
+        "BAJA": 0.41608106824532465
+      },
+      "tendencia_predicha": "BAJA",
+      "confianza": "BAJA",
+      "periodo": "Setiembre 2026 (t+1)"
+    }
+  }
+]
