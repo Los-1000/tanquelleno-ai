@@ -15,18 +15,24 @@
  * USO (desde mvp/web):
  *   GEMINI_API_KEY=... npm run auditar-llm
  */
-import { writeFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, mkdirSync, existsSync } from "node:fs";
 import path from "node:path";
 import { DEPARTAMENTOS } from "../lib/modelo";
 import { recomendar, type Generador } from "../lib/recomendar";
 import { generarConGemini } from "../lib/gemini";
 
+// Lee mvp/web/.env.local si existe (ignorado por git), para no pegar la clave en la terminal.
+const envLocal = path.resolve(__dirname, "..", ".env.local");
+if (!process.env.GEMINI_API_KEY && existsSync(envLocal)) process.loadEnvFile(envLocal);
+
 const apiKey = process.env.GEMINI_API_KEY;
 if (!apiKey) {
-  console.error("Falta GEMINI_API_KEY. Ejemplo:  GEMINI_API_KEY=xxx npm run auditar-llm");
+  console.error(
+    "Falta GEMINI_API_KEY. Ponla en mvp/web/.env.local o ejecuta:  GEMINI_API_KEY=xxx npm run auditar-llm",
+  );
   process.exit(1);
 }
-const modelo = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+const modelo = process.env.GEMINI_MODEL || "gemini-3.5-flash";
 const generador: Generador = (s, u) => generarConGemini(s, u, { apiKey, modelo, timeoutMs: 15000 });
 
 const pct = (n: number, d: number) => (d ? Math.round((1000 * n) / d) / 10 : 0);
@@ -39,7 +45,14 @@ async function main() {
   const casos = [];
   for (const d of DEPARTAMENTOS) {
     for (const nivel of ["bajo", "medio", "lleno"] as const) {
-      const r = await recomendar(d.departamento, nivel, generador);
+      // El plan gratuito limita peticiones por minuto: si Gemini responde 429 se espera y se
+      // repite el caso completo (la latencia registrada es la del intento que se conserva).
+      let r = await recomendar(d.departamento, nivel, generador);
+      for (let intento = 1; intento <= 4 && /429|503/.test(r.motivo_respaldo ?? ""); intento++) {
+        process.stdout.write("~");
+        await new Promise((ok) => setTimeout(ok, 20000 * intento));
+        r = await recomendar(d.departamento, nivel, generador);
+      }
       const cruda = r.auditoria_llm_cruda;
       casos.push({
         departamento: d.departamento,
@@ -60,7 +73,7 @@ async function main() {
         texto_final: r.texto,
       });
       process.stdout.write(".");
-      await new Promise((ok) => setTimeout(ok, 500)); // respeta el rate limit gratuito
+      await new Promise((ok) => setTimeout(ok, 6500)); // ~9 peticiones/min: respeta el rate limit gratuito
     }
   }
   console.log();

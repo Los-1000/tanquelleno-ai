@@ -98,7 +98,7 @@ Sin `GEMINI_API_KEY` el MVP funciona igual con la redacción determinista de res
 1. En [vercel.com/new](https://vercel.com/new) importar `Los-1000/tanquelleno-ai`.
 2. **Root Directory:** `mvp/web` (Framework: Next.js, se detecta solo).
 3. **Environment Variables:** `GEMINI_API_KEY` = clave de [Google AI Studio](https://aistudio.google.com/apikey)
-   (opcional `GEMINI_MODEL`, por defecto `gemini-2.5-flash`).
+   (opcional `GEMINI_MODEL`, por defecto `gemini-3.5-flash`).
 4. Deploy. Cada push a `main` redepliega.
 5. Verificar `https://<dominio>/api/salud` → `"llm_configurado": true`.
 

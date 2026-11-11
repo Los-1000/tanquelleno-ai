@@ -14,7 +14,7 @@ export interface OpcionesGemini {
 export async function generarConGemini(
   systemPrompt: string,
   mensajeUsuario: string,
-  { apiKey, modelo = "gemini-2.5-flash", timeoutMs = 6000 }: OpcionesGemini,
+  { apiKey, modelo = "gemini-3.5-flash", timeoutMs = 6000 }: OpcionesGemini,
 ): Promise<string> {
   const controlador = new AbortController();
   const temporizador = setTimeout(() => controlador.abort(), timeoutMs);

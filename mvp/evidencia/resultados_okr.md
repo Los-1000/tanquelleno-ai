@@ -21,7 +21,7 @@ recomendación confiable y sin datos inventados.
 | **KR1a** · Recall en alzas (test ciego 2026) | ≥ 70% | **93.8%** (75 de 80 alzas, P\* = 0.25) | 🟢 Cumple |
 | **KR1b** · Macro-F1 (test ciego 2026) | ≥ 0.55 | **0.206** con P\* = 0.25 · 0.442 con argmax | 🔴 No cumple |
 | KR1 · Superar baseline de persistencia | Macro-F1 > 0.083 | 0.206 (2.5×) · 0.442 argmax (5.3×) | 🟢 Supera |
-| **KR2** · Recomendaciones sin alucinación numérica (N ≥ 50) | 100% | Respaldo determinista: **100%** (60/60 Python, 72/72 MVP) · Gemini crudo: **pendiente** | 🟡 Parcial |
+| **KR2** · Recomendaciones sin alucinación numérica (N ≥ 50) | 100% | Respaldo determinista: **100%** (60/60 Python, 72/72 MVP) · Gemini 3.5 Flash crudo: **100%** (27/27), pero N = 27 < 50 por la cuota gratuita | 🟡 Parcial |
 | **KR3** · App pública en Vercel, respuesta < 1.5 s, Semana 10 | 100% | MVP construido y probado; despliegue **pendiente** | 🟡 Pendiente |
 | **KR4** · Ahorro proyectado por carga de 8 galones | ≥ S/ 8.00 | **S/ 16.96** (8 × brecha P90–P10 de S/ 2.12) | 🟢 Cumple |
 
@@ -79,13 +79,21 @@ corresponde. Se mide con `auditar_alucinacion_numerica` (Python) y su versión m
 |---|---:|---:|---:|---:|---|
 | Respaldo determinista (Python, Fase M) | 60 | 100% | 100% | 100% | `reportes/auditoria_kr2.json` |
 | Respaldo determinista (MVP, TypeScript) | 72 | 100% | 100% | 100% | `npm test` |
-| **Gemini Flash, texto crudo** | 72 | *pendiente* | *pendiente* | *pendiente* | `mvp/evidencia/auditoria_llm.json` |
-| Texto final que ve el usuario (Gemini + guardarraíl/respaldo) | 72 | *pendiente* | | | ídem |
+| **Gemini 3.5 Flash, texto crudo** | 27 | **100%** | 100% | 100% | `mvp/evidencia/auditoria_llm.json` |
+| Texto final que ve el usuario (Gemini + guardarraíl/respaldo) | 72 | 100% | 100% | 100% | ídem |
 
-> **Pendiente del equipo:** correr `GEMINI_API_KEY=xxx npm run auditar-llm` en `mvp/web` y copiar
-> aquí el resumen. Si Gemini crudo tiene < 100%, el KR2 se reporta como **no cumplido por el LLM**
-> y cumplido en lo que ve el usuario gracias a la auditoría + respaldo; ambas cifras deben
-> mostrarse.
+Medición real del 11/11/2026 (`npm run auditar-llm`, modelo `gemini-3.5-flash`, plan gratuito):
+
+- De los 72 casos, Gemini respondió **27** (14 departamentos). Los otros 45 recibieron HTTP 429:
+  la cuota gratuita es de **20 peticiones por día y por modelo**. Esos casos pasaron al respaldo
+  determinista, así que el usuario igual recibió un texto que cumple el contrato (72/72).
+- En las 27 respuestas crudas: **0 cifras inventadas**, 27/27 con aviso de IA y 11/11 con la
+  advertencia de incertidumbre cuando correspondía. El guardarraíl no tuvo que corregir ninguna.
+- **El KR2 queda parcial:** la tasa es de 100%, pero N = 27 no llega al mínimo de 50. Para cerrarlo
+  hay que repetir la auditoría con una clave con facturación activa o sumando corridas de días
+  distintos. No se declara cumplido.
+- Nota técnica: `gemini-2.5-flash` ya no está disponible para claves nuevas (HTTP 404), por eso el
+  MVP usa ahora `gemini-3.5-flash` por defecto.
 
 ## KR3 — Despliegue
 
@@ -94,7 +102,7 @@ corresponde. Se mide con `auditar_alucinacion_numerica` (Python) y su versión m
 | App Next.js con el modelo y la capa de lenguaje integrados | ✅ `mvp/web`, build de producción OK |
 | Respuesta del servidor con respaldo determinista (local) | ✅ ~1 ms de cómputo del modelo |
 | URL pública en Vercel | ⏳ *pendiente: pegar URL y fecha* |
-| Latencia con Gemini (p50/p95) | ⏳ *pendiente: de `auditoria_llm.json`* |
+| Latencia con Gemini (p50/p95) | 🔴 **2.9 s / 6.0 s** en las 27 respuestas reales: por encima de la meta de 1.5 s. Sin Gemini (respaldo) responde en < 0.5 s |
 | Fecha de despliegue vs. meta Semana 10 | ⏳ *pendiente* — si fue después de S10, declararlo |
 
 **Desviación declarada:** la PC1 previó Supabase como base de datos. El MVP no la necesita: los
