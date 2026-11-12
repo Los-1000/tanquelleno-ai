@@ -22,7 +22,7 @@ recomendación confiable y sin datos inventados.
 | **KR1b** · Macro-F1 (test ciego 2026) | ≥ 0.55 | **0.206** con P\* = 0.25 · 0.442 con argmax | 🔴 No cumple |
 | KR1 · Superar baseline de persistencia | Macro-F1 > 0.083 | 0.206 (2.5×) · 0.442 argmax (5.3×) | 🟢 Supera |
 | **KR2** · Recomendaciones sin alucinación numérica (N ≥ 50) | 100% | Respaldo determinista: **100%** (60/60 Python, 72/72 MVP) · Gemini 3.5 Flash crudo: **100%** (27/27), pero N = 27 < 50 por la cuota gratuita | 🟡 Parcial |
-| **KR3** · App pública en Vercel, respuesta < 1.5 s, Semana 10 | 100% | MVP construido y probado; despliegue **pendiente** | 🟡 Pendiente |
+| **KR3** · App pública en Vercel, respuesta < 1.5 s, Semana 10 | 100% | Publicado el 11-nov-2026 (después de S10). Sin Gemini: **0.42 s** (mediana); con Gemini: 2.9 s | 🟡 Parcial |
 | **KR4** · Ahorro proyectado por carga de 8 galones | ≥ S/ 8.00 | **S/ 16.96** (8 × brecha P90–P10 de S/ 2.12) | 🟢 Cumple |
 
 ---
@@ -101,9 +101,10 @@ Medición real del 11/11/2026 (`npm run auditar-llm`, modelo `gemini-3.5-flash`,
 |---|---|
 | App Next.js con el modelo y la capa de lenguaje integrados | ✅ `mvp/web`, build de producción OK |
 | Respuesta del servidor con respaldo determinista (local) | ✅ ~1 ms de cómputo del modelo |
-| URL pública en Vercel | ⏳ *pendiente: pegar URL y fecha* |
+| URL pública en Vercel | ✅ https://lunetra-ai.vercel.app · `/api/salud` → `"estado": "ok"`, 24 departamentos |
+| Latencia pública sin Gemini (respaldo) | ✅ **0.42 s** de mediana, máx. 0.56 s (10 consultas a `/api/recomendar`, 11-nov-2026) |
 | Latencia con Gemini (p50/p95) | 🔴 **2.9 s / 6.0 s** en las 27 respuestas reales: por encima de la meta de 1.5 s. Sin Gemini (respaldo) responde en < 0.5 s |
-| Fecha de despliegue vs. meta Semana 10 | ⏳ *pendiente* — si fue después de S10, declararlo |
+| Fecha de despliegue vs. meta Semana 10 | 🔴 11-nov-2026: **después de la Semana 10**, se declara el atraso |
 
 **Desviación declarada:** la PC1 previó Supabase como base de datos. El MVP no la necesita: los
 datos de inferencia son estáticos y se actualizan con un commit al reentrenar. Se mantiene como

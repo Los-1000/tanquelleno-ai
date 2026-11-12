@@ -11,7 +11,15 @@ const NIVELES: { valor: Nivel; etiqueta: string; ayuda: string }[] = [
   { valor: "lleno", etiqueta: "Lleno", ayuda: "¾ o más" },
 ];
 
-const nombreBonito = (d: string) => d.toLowerCase().replace(/(^|\s)\S/g, (c) => c.toUpperCase());
+// Gemini a veces marca negritas con **texto**: se muestran como negrita en vez de asteriscos.
+function conNegritas(parrafo: string) {
+  return parrafo
+    .replace(/^\s*[*-]\s+/gm, "")
+    .split(/\*\*(.+?)\*\*/g)
+    .map((trozo, i) => (i % 2 === 1 ? <strong key={i}>{trozo}</strong> : trozo.replace(/\*\*/g, "")));
+}
+
+const nombreBonito =(d: string) => d.toLowerCase().replace(/(^|\s)\S/g, (c) => c.toUpperCase());
 
 const TENDENCIA_TEXTO: Record<string, string> = {
   SUBE: "Sube",
@@ -160,7 +168,7 @@ function Resultado({ r }: { r: Recomendacion }) {
           <span aria-hidden>✦</span> Lunetra IA te explica
         </p>
         {r.texto.split(/\n\s*\n/).map((parrafo, i) => (
-          <p key={i}>{parrafo}</p>
+          <p key={i}>{conNegritas(parrafo)}</p>
         ))}
       </div>
 

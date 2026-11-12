@@ -49,9 +49,9 @@ Lunetra IA combina un **componente analítico de Machine Learning (Nivel A2 — 
 |---|:---:|:---:|---|
 | **Fase P (Problem Statement Canvas)** | S1 – S3 | 🟢 **Cerrada** | Canvas de problema sin tecnología, cuantificación de sobrecosto (H5), filtro de IA y componentes A2 + G1. |
 | **Fase R (Data Readiness Assessment)** | S4 – S5 | 🟢 **Cerrada** | Inventario oficial, semáforo transparente, protocolo anti-leakage y saneamiento de anomalías (16 valores fuera de rango). |
-| **Fase M (Modelado & Despliegue)** | S7 – S11 | 🟢 **MVP construido** | Regresión Logística Regularizada, pipeline end-to-end con auditoría KR2 y **MVP Next.js en [`mvp/web`](mvp/web)** con el modelo y Gemini integrados (120 pruebas). Pendiente: publicar en Vercel y las variables macro. Resultados en [`analisis/fase_m_resultados.md`](analisis/fase_m_resultados.md). |
+| **Fase M (Modelado & Despliegue)** | S7 – S11 | 🟢 **MVP construido** | Regresión Logística Regularizada, pipeline end-to-end con auditoría KR2 y **MVP Next.js en [`mvp/web`](mvp/web)** con el modelo y Gemini integrados (120 pruebas). Publicado en https://lunetra-ai.vercel.app (11-nov-2026). Pendiente: las variables macro. Resultados en [`analisis/fase_m_resultados.md`](analisis/fase_m_resultados.md). |
 | **Fase P2 (Pilotaje e Impacto)** | S12 | 🟡 **En curso** | KRs medidos en [`mvp/evidencia/resultados_okr.md`](mvp/evidencia/resultados_okr.md), [Plantilla 4](plantillas/plantilla_4_impact_assessment.md) completa y protocolo de [pruebas con usuarios](mvp/evidencia/pruebas_usuario.md) (faltan los usuarios reales). |
-| **Fase T (Transferencia & Cierre PC2)** | S13 | 🟡 **En curso** | Manual del evaluador ([`mvp/README_mvp.md`](mvp/README_mvp.md)) y [guion de la PC2](presentacion_pc2_guion.md). Falta `presentacion_pc2.pdf` y el ensayo con demo en vivo. |
+| **Fase T (Transferencia & Cierre PC2)** | S13 | 🟡 **En curso** | Manual del evaluador ([`mvp/README_mvp.md`](mvp/README_mvp.md)) y [guion de la PC2](presentacion_pc2_guion.md). Deck [`presentacion_pc2.pdf`](presentacion_pc2.pdf) armado (falta llenar la lámina de pruebas con usuarios). Falta el ensayo con demo en vivo. |
 
 ---
 
@@ -70,6 +70,8 @@ tanquelleno-ai/
 ├── Makefile                                <- [Fase M] Atajos reproducibles (make ayuda)
 ├── pipeline_inferencia.py                  <- [Fase M] Pipeline end-to-end: modelo -> payload -> recomendación
 ├── presentacion_pc2_guion.md               <- [PC2] Guion de 20 min con demo en vivo y preguntas probables
+├── presentacion_pc2.pptx                   <- [PC2] Deck editable de 12 láminas con notas del orador
+├── presentacion_pc2.pdf                    <- [PC2] Deck en PDF para la entrega
 ├── mvp/                                    <- [PC2] Producto mínimo viable desplegable
 │   ├── README_mvp.md                       <- URL pública, instrucciones para el evaluador y despliegue
 │   ├── evidencia/
@@ -207,7 +209,7 @@ Cifras regeneradas y auditadas por `make todo`. Detalle e interpretación en [`a
 | **KR1** · Recall en Alzas | $\ge$ 70% | **93.8%** (con umbral $P^* = 0.25$) | ✅ **Cumple (+23.8 pp)** |
 | **KR1** · Macro-F1 en Test Ciego | $\ge$ 0.55 | 0.4418 con argmax · 0.2058 con $P^* = 0.25$ | ❌ No alcanzada (supera 5.3x al baseline de persistencia: 0.0833) |
 | **KR2** · Recomendaciones sin Alucinación | 100% ($N \ge 50$) | **100%** sobre 60 casos evaluados | ✅ **Cumple** |
-| **KR3** · Despliegue Operativo en la Nube | 100% en Semana 10 | MVP Next.js construido y probado ([`mvp/web`](mvp/web)); falta publicar en Vercel | 🟡 Pendiente |
+| **KR3** · Despliegue Operativo en la Nube | 100% en Semana 10 | Publicado en https://lunetra-ai.vercel.app el 11-nov-2026 (después de la Semana 10). Responde en 0.42 s sin Gemini; con Gemini, 2.9 s (mediana) | 🟡 Parcial |
 | **KR4** · Ahorro por Carga frente a Dispersión | $\ge$ S/ 8.00 | **S/ 16.96** (Brecha oficial P90–P10 de S/ 2.12/galón en 8 galones) | ✅ **Cumple** |
 
 Hallazgo destacado: La brecha estructural entre estaciones de servicio en Lima alcanza S/ 2.12 por galón (Hallazgo H5). Un conductor que utiliza la banda referencial evita pagar hasta S/ 16.96 adicionales por tanqueada semanal.

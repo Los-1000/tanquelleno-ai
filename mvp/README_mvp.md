@@ -7,9 +7,8 @@
 
 **➡️ https://lunetra-ai.vercel.app** &nbsp;·&nbsp; chequeo de disponibilidad: `/api/salud`
 
-> ⚠️ **Pendiente del equipo:** confirmar esta URL después del primer despliegue en Vercel (ver
-> [Despliegue](#despliegue-en-vercel)). Si Vercel asigna otro dominio, reemplazarlo aquí, en el
-> `README.md` raíz y en el checklist.
+> ✅ **Publicado en Vercel el 11-nov-2026.** `/api/salud` responde `"estado": "ok"` con los 24
+> departamentos; la recomendación responde en ~0.4 s (mediana de 10 consultas, sin Gemini).
 
 ---
 

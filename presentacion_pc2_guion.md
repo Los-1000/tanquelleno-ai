@@ -1,6 +1,11 @@
 # Guion de sustentación PC2 — Lunetra IA (20 minutos con demo en vivo)
 
-> Borrador para armar `presentacion_pc2.pdf`. Tiempos en minutos acumulados. Cada integrante debe
+> Deck armado: [`presentacion_pc2.pptx`](presentacion_pc2.pptx) (editable, con notas del orador) y
+> [`presentacion_pc2.pdf`](presentacion_pc2.pdf). 11 láminas + 1 de anexo para preguntas. **Antes de la
+> PC2:** llenar la lámina 8 con las pruebas reales, confirmar la URL de la portada (y su QR) y el
+> estado del KR3 en la lámina 9, y completar la columna «Quién».
+>
+> Tiempos en minutos acumulados. Cada integrante debe
 > poder responder sobre **cualquier** fase: ver la sección "Preguntas probables" al final y
 > ensayar rotando quién responde.
 >
